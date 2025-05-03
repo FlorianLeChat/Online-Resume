@@ -13,13 +13,16 @@
     "url": "https://github.com/FlorianLeChat/Online-Resume/issues"
   },
   "devDependencies": {
+    "@types/qrcode": "~1.5",
     "@types/eslint-plugin-jsx-a11y": "~6.10",
     "vite": "~6.3",
     "husky": "~9.1",
+    "qrcode": "~1.5",
     "eslint": "~9.25",
     "svelte": "~5.28",
     "globals": "~16.0",
     "prettier": "~3.5",
+    "flag-icons": "~7.3",
     "typescript": "~5.8",
     "lint-staged": "~15.5",
     "svelte-check": "~4.1",
