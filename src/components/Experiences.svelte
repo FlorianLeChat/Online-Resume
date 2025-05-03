@@ -1,18 +1,10 @@
 <script lang="ts">
 	// Importation des dépendances et composants.
 	import config from "../data/default.json";
+	import { formatDate } from "../utilities/date";
 
 	// Inversion de l'ordre des expériences pour les afficher du plus récent au plus ancien.
 	const experiences = config.experiences.reverse();
-
-	// Mise en forme des dates en fonction de la langue configurée.
-	const formatDate = ( date: string ) =>
-	{
-		return new Intl.DateTimeFormat( config.locale, {
-			year: "numeric",
-			month: "long"
-		} ).format( new Date( date ) );
-	};
 </script>
 
 <section>
