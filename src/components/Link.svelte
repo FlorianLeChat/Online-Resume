@@ -10,7 +10,10 @@
 {#await qrCode.toDataURL( url )}
 	<p>...</p>
 {:then dataUrl}
-	<img src={dataUrl} alt="QR Code" />
+	<figure>
+		<img src={dataUrl} alt={title} />
+		<figcaption>{title}</figcaption>
+	</figure>
 {/await}
 
 <!-- Lien vers un lien quelconque -->
@@ -19,9 +22,10 @@
 </a>
 
 <style>
-	img {
-		/* QR Code en mode écran */
-		display: none;
+	figure {
+		/* Conteneur pour le QR Code */
+		margin: 0;
+		text-align: center;
 	}
 
 	a {
@@ -31,10 +35,18 @@
 		text-underline-offset: 2px;
 	}
 
+	@media screen {
+		figure {
+			/* Disparition du QR Code en mode écran */
+			display: none;
+		}
+	}
+
 	@media print {
 		/* En mode d'impression, le QR Code est affiché et le lien est masqué */
 		img {
-			display: block;
+			width: 100px;
+			height: 100px;
 		}
 
 		a {

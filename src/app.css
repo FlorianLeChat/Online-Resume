@@ -10,8 +10,8 @@ body
 	/* Contenu de la page */
 	margin: 0;
 	padding: 0;
-	background: rgb(240, 240, 240);
 	font-family: system-ui, sans-serif;
+	background-color: rgb(240, 240, 240);
 }
 
 main
@@ -19,11 +19,11 @@ main
 	/* Conteneur général */
 	color: rgb(51, 51, 51);
 	width: 21cm;
-	height: 29.7cm;
 	margin: 1cm auto;
 	padding: 2cm;
-	background: white;
+	min-height: 29.7cm;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	background-color: white;
 }
 
 section
@@ -67,9 +67,20 @@ section small.time {
 	margin-left: auto;
 }
 
-@media print {
-	/* Désactivation des liens de section en mode d'impression */
-	section a {
+@media print
+{
+	body, main
+	{
+		/* Apparence de la page pour l'impression */
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+		background-color: initial;
+	}
+
+	section a
+	{
+		/* Désactivation des liens de section en mode d'impression */
 		display: none;
 	}
 }
