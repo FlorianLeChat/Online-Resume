@@ -18,12 +18,14 @@
 			{education.degree}, {education.institution}
 		</h3>
 
-		<small>
+		<small class="time">
 			<!-- Date de début et de fin d'activité -->
 			{#if education.endDate}
-				{startDate} - {endDate}
+				<time datetime={startDate}>{startDate}</time>
+				-
+				<time datetime={endDate}>{endDate}</time>
 			{:else}
-				{startDate} - Présent
+				<time datetime={startDate}>{startDate}</time> - Présent
 			{/if}
 		</small>
 
@@ -40,21 +42,7 @@
 </section>
 
 <style>
-	h3 {
-		/* Intitulé du poste et nom de l'entreprise. */
-		display: inline;
-		font-size: 1rem;
-		margin-top: 1rem;
-		margin-bottom: 0.5rem;
-	}
-
-	small:first-of-type {
-		/* Date de début et de fin d'activité */
-		float: right;
-		margin-left: auto;
-	}
-
-	small:last-of-type {
+	small:not(.time) {
 		/* État de la formation (en cours, terminée, etc.) */
 		width: fit-content;
 		display: block;

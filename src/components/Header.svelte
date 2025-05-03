@@ -66,6 +66,7 @@
 
 	h1 {
 		/* Nom et prénom de la personne */
+		color: rgb(26, 124, 209);
 		margin: 0;
 		font-size: 2rem;
 	}
