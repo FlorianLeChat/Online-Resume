@@ -1,0 +1,75 @@
+@page
+{
+	/* Apparence de page pour l'impression */
+	size: A4;
+	margin: 2cm;
+}
+
+body
+{
+	/* Contenu de la page */
+	margin: 0;
+	padding: 0;
+	background: rgb(240, 240, 240);
+	font-family: system-ui, sans-serif;
+}
+
+main
+{
+	/* Conteneur général */
+	color: rgb(51, 51, 51);
+	width: 21cm;
+	height: 29.7cm;
+	margin: 1cm auto;
+	padding: 2cm;
+	background: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+section
+{
+	/* Sections de la page */
+	margin-bottom: 2.25rem;
+}
+
+section h2
+{
+	/* Titres de section */
+	color: rgb(26, 124, 209);
+	font-size: 1.25rem;
+	border-bottom: 1px solid rgb(170, 170, 170);
+	margin-bottom: 0.5cm;
+}
+
+section h3 {
+	/* Intitulé de sous-section */
+	display: inline;
+	font-size: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+section a {
+	/* Lien de section */
+	color: inherit;
+	width: fit-content;
+	display: block;
+	font-size: 0.75rem;
+	margin-bottom: 1rem;
+	text-decoration: dotted underline;
+	text-underline-offset: 2px;
+}
+
+section small.time {
+	/* Date de section */
+	float: right;
+	font-size: 0.85rem;
+	margin-left: auto;
+}
+
+@media print {
+	/* Désactivation des liens de section en mode d'impression */
+	section a {
+		display: none;
+	}
+}

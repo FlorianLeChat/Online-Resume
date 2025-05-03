@@ -8,7 +8,7 @@
 </script>
 
 <section>
-	<h2>Expériences Professionnelles</h2>
+	<h2>Expériences professionnelles</h2>
 
 	{#each experiences as experience ( experience.company )}
 		{@const startDate = formatDate( experience.startDate )}
@@ -17,16 +17,18 @@
 			: ""}
 
 		<h3>
-			<!-- Intitulé du poste et nom de l'entreprise. -->
+			<!-- Intitulé du poste et nom de l'entreprise -->
 			{experience.position}, {experience.company}
 		</h3>
 
-		<small>
+		<small class="time">
 			<!-- Date de début et de fin d'activité -->
 			{#if experience.endDate}
-				{startDate} - {endDate}
+				<time datetime={startDate}>{startDate}</time>
+				-
+				<time datetime={endDate}>{endDate}</time>
 			{:else}
-				{startDate} - Présent
+				<time datetime={startDate}>{startDate}</time> - Présent
 			{/if}
 		</small>
 
@@ -43,36 +45,3 @@
 		</ul>
 	{/each}
 </section>
-
-<style>
-	h3 {
-		/* Intitulé du poste et nom de l'entreprise. */
-		display: inline;
-		font-size: 1rem;
-		margin-top: 1rem;
-		margin-bottom: 0.5rem;
-	}
-
-	a {
-		/* Lien vers le site de l'entreprise. */
-		color: inherit;
-		width: fit-content;
-		display: block;
-		font-size: 0.75rem;
-		text-decoration: dotted underline;
-		text-underline-offset: 2px;
-	}
-
-	@media print {
-		/* L'affichage du lien est désactivé en mode d'impression */
-		a {
-			display: none;
-		}
-	}
-
-	small {
-		/* Date de début et de fin d'activité */
-		float: right;
-		margin-left: auto;
-	}
-</style>
