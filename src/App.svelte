@@ -4,6 +4,7 @@
 	import Header from "./components/Header.svelte";
 	import Profile from "./components/Profile.svelte";
 	import Skills from "./components/Skills.svelte";
+	import Certifications from "./components/Certifications.svelte";
 	import Experiences from "./components/Experiences.svelte";
 	import Educations from "./components/Educations.svelte";
 </script>
@@ -11,9 +12,10 @@
 <main lang={config.locale}>
 	<Header />
 	<Profile />
+	<Skills />
 
-	{#if config.skills}
-		<Skills />
+	{#if config.certifications.length > 0}
+		<Certifications />
 	{/if}
 
 	{#if config.experiences.length > 0}
