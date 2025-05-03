@@ -7,9 +7,8 @@
 	<h2>Compétences</h2>
 
 	<ul>
-		<li>Langages : {config.skills.languages.join( ", " )}</li>
-		<li>Frameworks : {config.skills.frameworks.join( ", " )}</li>
-		<li>Base de données : {config.skills.database.join( ", " )}</li>
-		<li>Outils : {config.skills.tools.join( ", " )}</li>
+		{#each config.skills as skill ( skill.name )}
+			<li>{skill.name} : {skill.data.join( ", " )}</li>
+		{/each}
 	</ul>
 </section>

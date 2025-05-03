@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	// Importation des dépendances et composants.
 	import config from "../data/default.json";
 	import { formatDate } from "../utilities/date";
