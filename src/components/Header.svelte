@@ -20,6 +20,17 @@
 	<!-- Titre du poste recherché -->
 	<p>{config.job}</p>
 
+	{#if config.languages?.length > 0}
+		<!-- Langues parlées -->
+		{#each config.languages as language ( language )}
+			{#if language === "en"}
+				<span class="fi fi-gb"></span>
+			{:else}
+				<span class="fi fi-{language}"></span>
+			{/if}
+		{/each}
+	{/if}
+
 	<ul>
 		<!-- Informations de contact -->
 		<li>📧 <a href="mailto:{config.email}">{config.email}</a> |</li>
@@ -31,32 +42,15 @@
 		{/if}
 	</ul>
 
-	{#if config.links.length > 0}
+	{#if config.links?.length > 0}
 		<ul>
 			<!-- Accès vers les liens sociaux et personnels -->
-			<li>🔗</li>
-
 			{#each config.links as link, index ( link )}
 				{#if index > 0}
-					<li>&nbsp;|</li>
+					<li class="space">&nbsp;|</li>
 				{/if}
 
 				<li><Link title={link.name} url={link.url} /></li>
-			{/each}
-		</ul>
-	{/if}
-
-	{#if config.languages.length > 0}
-		<ul>
-			<!-- Langues parlées -->
-			<li>💬</li>
-
-			{#each config.languages as language ( language )}
-				{#if language === "en"}
-					<li class="fi fi-gb"></li>
-				{:else}
-					<li class="fi fi-{language}"></li>
-				{/if}
 			{/each}
 		</ul>
 	{/if}
@@ -79,7 +73,8 @@
 
 	p {
 		/* Titre du poste recherché */
-		margin: 0.25rem 0;
+		margin: 0.25rem 0.25rem 0 0;
+		display: inline-block;
 	}
 
 	ul {
@@ -89,7 +84,7 @@
 		list-style: none;
 	}
 
-	ul:not(:first-of-type) {
+	ul:last-of-type {
 		/* Liste des liens vers les liens sociaux et personnels */
 		margin: 0 0 0.5rem 0;
 		display: inline-block;
@@ -100,7 +95,20 @@
 		display: inline-block;
 	}
 
-	li.fi {
+	@media print {
+		ul:last-of-type {
+			/* En mode d'impression, les codes QR doivent être suffisamment espacés pour être lisibles */
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		li.space {
+			/* En mode d'impression, les espacements sont masqués */
+			display: none;
+		}
+	}
+
+	span {
 		/* Icônes des langues parlées */
 		margin: 0 0.25rem 0 0;
 	}
