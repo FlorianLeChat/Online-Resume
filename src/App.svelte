@@ -1,11 +1,11 @@
 <script>
 	// Importation des dépendances et composants.
-	import config from "./data/_example.json";
+	import config from "./data/default.json";
 	import Header from "./components/Header.svelte";
 	import Profile from "./components/Profile.svelte";
 	import Skills from "./components/Skills.svelte";
 	import Experiences from "./components/Experiences.svelte";
-	import Education from "./components/Education.svelte";
+	import Educations from "./components/Educations.svelte";
 </script>
 
 <main lang={config.locale}>
@@ -21,6 +21,6 @@
 	{/if}
 
 	{#if config.educations.length > 0}
-		<Education />
+		<Educations />
 	{/if}
 </main>
