@@ -20,17 +20,6 @@
 	<!-- Titre du poste recherché -->
 	<p>{config.job}</p>
 
-	{#if config.languages.length > 0}
-		<!-- Langues parlées -->
-		{#each config.languages as language ( language )}
-			{#if language === "en"}
-				<span class="fi fi-gb"></span>
-			{:else}
-				<span class="fi fi-{language}"></span>
-			{/if}
-		{/each}
-	{/if}
-
 	<ul>
 		<!-- Informations de contact -->
 		<li>📧 <a href="mailto:{config.email}">{config.email}</a> |</li>
@@ -45,12 +34,29 @@
 	{#if config.links.length > 0}
 		<ul>
 			<!-- Accès vers les liens sociaux et personnels -->
+			<li>🔗</li>
+
 			{#each config.links as link, index ( link )}
 				{#if index > 0}
 					<li>&nbsp;|</li>
 				{/if}
 
 				<li><Link title={link.name} url={link.url} /></li>
+			{/each}
+		</ul>
+	{/if}
+
+	{#if config.languages.length > 0}
+		<ul>
+			<!-- Langues parlées -->
+			<li>💬</li>
+
+			{#each config.languages as language ( language )}
+				{#if language === "en"}
+					<li class="fi fi-gb"></li>
+				{:else}
+					<li class="fi fi-{language}"></li>
+				{/if}
 			{/each}
 		</ul>
 	{/if}
@@ -83,9 +89,10 @@
 		list-style: none;
 	}
 
-	ul:last-of-type {
+	ul:not(:first-of-type) {
 		/* Liste des liens vers les liens sociaux et personnels */
-		margin-bottom: 0.5rem;
+		margin: 0 0 0.5rem 0;
+		display: inline-block;
 	}
 
 	li {
@@ -93,11 +100,9 @@
 		display: inline-block;
 	}
 
-	span {
+	li.fi {
 		/* Icônes des langues parlées */
-		margin: 0.25rem 0;
-		font-size: 1.25rem;
-		margin-right: 0.5rem;
+		margin: 0 0.25rem 0 0;
 	}
 
 	a {
