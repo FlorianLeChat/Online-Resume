@@ -1,13 +1,14 @@
 <script>
 	// Importation des dépendances et composants.
 	import config from "./data/default.json";
+	import GitHubCorner from "./components/GitHubCorner.svelte";
 	import Header from "./components/Header.svelte";
 	import Profile from "./components/Profile.svelte";
 	import Skills from "./components/Skills.svelte";
 	import Certifications from "./components/Certifications.svelte";
 	import Experiences from "./components/Experiences.svelte";
 	import Educations from "./components/Educations.svelte";
-	import GitHubCorner from "./components/GitHubCorner.svelte";
+	import Hobbies from "./components/Hobbies.svelte";
 </script>
 
 <main lang={config.locale}>
@@ -38,5 +39,10 @@
 	<!-- Formations scolaires -->
 	{#if config.educations?.length > 0}
 		<Educations />
+	{/if}
+
+	<!-- Loisirs -->
+	{#if config.hobbies?.length > 0}
+		<Hobbies />
 	{/if}
 </main>
