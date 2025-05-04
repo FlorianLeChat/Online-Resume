@@ -37,7 +37,7 @@
 		{/if}
 
 		<!-- Description de la formation -->
-		<p>{education.description}</p>
+		<p>{@html education.description}</p>
 	{/each}
 </section>
 
@@ -47,5 +47,10 @@
 		width: fit-content;
 		display: block;
 		font-size: 0.75rem;
+	}
+
+	p {
+		/* Description de la formation */
+		font-size: 0.875rem;
 	}
 </style>

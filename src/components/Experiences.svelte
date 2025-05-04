@@ -40,8 +40,15 @@
 		<ul>
 			<!-- Liste des activités réalisées dans le cadre de l'expérience. -->
 			{#each experience.description as description ( description )}
-				<li>{description}</li>
+				<li>{@html description}</li>
 			{/each}
 		</ul>
 	{/each}
 </section>
+
+<style>
+	li {
+		/* Description de l'expérience */
+		font-size: 0.875rem;
+	}
+</style>
