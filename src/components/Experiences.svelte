@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Importation des dépendances et composants.
 	import data from "../data/default.json";
-	import { formatDate } from "../utilities/date";
+	import { calculateDuration, formatDate } from "../utilities/date";
 	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
 
 	// Récupération de la configuration et des traductions.
@@ -26,7 +26,7 @@
 				{experience.position}, {experience.company}
 			</h3>
 
-			<small class="time">
+			<div class="time">
 				<!-- Date de début et de fin d'activité -->
 				{#if experience.endDate}
 					<time datetime={startDate}>{startDate}</time>
@@ -35,7 +35,12 @@
 				{:else}
 					<time datetime={startDate}>{startDate}</time> - {translations.present}
 				{/if}
-			</small>
+
+				<br />
+
+				<!-- Durée de l'activité -->
+				{calculateDuration( experience.startDate, experience.endDate )}
+			</div>
 
 			<!-- Lien vers le site de l'entreprise -->
 			{#if experience.link}

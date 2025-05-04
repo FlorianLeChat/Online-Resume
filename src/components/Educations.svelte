@@ -24,7 +24,7 @@
 				{education.degree}, {education.institution}
 			</h3>
 
-			<small class="time">
+			<div class="time">
 				<!-- Date de début et de fin d'activité -->
 				{#if education.endDate}
 					<time datetime={startDate}>{startDate}</time>
@@ -33,7 +33,7 @@
 				{:else}
 					<time datetime={startDate}>{startDate}</time> - {translations.present}
 				{/if}
-			</small>
+			</div>
 
 			{#if education.statement}
 				<small>
@@ -49,7 +49,7 @@
 {/if}
 
 <style>
-	small:not(.time) {
+	small {
 		/* État de la formation (en cours, terminée, etc.) */
 		width: fit-content;
 		display: block;

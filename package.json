@@ -21,6 +21,7 @@
     "eslint": "~9.25",
     "svelte": "~5.28",
     "globals": "~16.0",
+    "date-fns": "~4.1",
     "prettier": "~3.5",
     "flag-icons": "~7.3",
     "typescript": "~5.8",
