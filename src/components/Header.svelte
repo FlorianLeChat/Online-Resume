@@ -128,6 +128,11 @@
 	span {
 		/* Icônes des langues parlées */
 		margin: 0 0.25rem 0 0;
+
+		/* Force l'affichage des drapeaux en mode d'impression */
+		/* https://stackoverflow.com/a/44908040 */
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
 	}
 
 	a {

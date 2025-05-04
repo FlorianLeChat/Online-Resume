@@ -11,4 +11,5 @@ export interface TranslationProperties
 	hobbies: string;
 	present: string;
 	licence: string;
+	export: string;
 }
