@@ -1,45 +1,52 @@
-<script>
+<script lang="ts">
 	// Importation des dépendances et composants.
-	import config from "../data/default.json";
+	import data from "../data/default.json";
 	import { formatDate } from "../utilities/date";
+	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+
+	// Récupération de la configuration et des traductions.
+	const configuration: ConfigurationProperties = data;
+	const translations = configuration.translations;
 </script>
 
-<section>
-	<h2>Formation</h2>
+{#if configuration.educations}
+	<section>
+		<h2>{translations.educations}</h2>
 
-	{#each config.educations as education ( education.institution )}
-		{@const startDate = formatDate( education.startDate )}
-		{@const endDate = education.endDate
-			? formatDate( education.endDate )
-			: ""}
+		{#each configuration.educations as education ( education.institution )}
+			{@const startDate = formatDate( education.startDate )}
+			{@const endDate = education.endDate
+				? formatDate( education.endDate )
+				: ""}
 
-		<h3>
-			<!-- Intitulé de la formation et nom de l'établissement -->
-			{education.degree}, {education.institution}
-		</h3>
+			<h3>
+				<!-- Intitulé de la formation et nom de l'établissement -->
+				{education.degree}, {education.institution}
+			</h3>
 
-		<small class="time">
-			<!-- Date de début et de fin d'activité -->
-			{#if education.endDate}
-				<time datetime={startDate}>{startDate}</time>
-				-
-				<time datetime={endDate}>{endDate}</time>
-			{:else}
-				<time datetime={startDate}>{startDate}</time> - Présent
-			{/if}
-		</small>
-
-		{#if education.statement}
-			<small>
-				<!-- Situation de la formation (en cours, terminée, etc.) -->
-				{education.statement}
+			<small class="time">
+				<!-- Date de début et de fin d'activité -->
+				{#if education.endDate}
+					<time datetime={startDate}>{startDate}</time>
+					-
+					<time datetime={endDate}>{endDate}</time>
+				{:else}
+					<time datetime={startDate}>{startDate}</time> - {translations.present}
+				{/if}
 			</small>
-		{/if}
 
-		<!-- Description de la formation -->
-		<p>{@html education.description}</p>
-	{/each}
-</section>
+			{#if education.statement}
+				<small>
+					<!-- Situation de la formation (en cours, terminée, etc.) -->
+					{education.statement}
+				</small>
+			{/if}
+
+			<!-- Description de la formation -->
+			<p>{@html education.description}</p>
+		{/each}
+	</section>
+{/if}
 
 <style>
 	small:not(.time) {

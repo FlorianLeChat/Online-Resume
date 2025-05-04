@@ -1,12 +1,17 @@
-<script>
+<script lang="ts">
 	// Importation des dépendances et composants.
-	import config from "../data/default.json";
+	import data from "../data/default.json";
+	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+
+	// Récupération de la configuration et des traductions.
+	const configuration: ConfigurationProperties = data;
+	const translations = configuration.translations;
 </script>
 
 <section>
-	<h2>Profil</h2>
+	<h2>{translations.profile}</h2>
 
-	<p>{config.description}</p>
+	<p>{configuration.description}</p>
 </section>
 
 <style>
