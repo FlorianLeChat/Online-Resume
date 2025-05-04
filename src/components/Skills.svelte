@@ -8,7 +8,7 @@
 
 	<ul>
 		{#each config.skills as skill ( skill.name )}
-			<li>{skill.name} : {skill.data.join( ", " )}</li>
+			<li><u>{skill.name}</u> : <code>{skill.data.join( ", " )}</code></li>
 		{/each}
 	</ul>
 </section>
