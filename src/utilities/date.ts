@@ -3,7 +3,7 @@ import { enGB, fr } from "date-fns/locale";
 import { intervalToDuration, formatDuration } from "date-fns";
 
 //
-// Mise en forme des dates en fonction d'une langue donnée0.
+// Mise en forme des dates en fonction d'une langue donnée.
 //
 export const formatDate = ( date: string ) =>
 {

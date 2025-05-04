@@ -13,16 +13,14 @@
 	<section>
 		<h2>{translations.educations}</h2>
 
-		{#each configuration.educations as education ( education.institution )}
+		{#each configuration.educations as education ( education )}
 			{@const startDate = formatDate( education.startDate )}
 			{@const endDate = education.endDate
 				? formatDate( education.endDate )
 				: ""}
 
-			<h3>
-				<!-- Intitulé de la formation et nom de l'établissement -->
-				{education.degree}, {education.institution}
-			</h3>
+			<!-- Intitulé de la formation -->
+			<h3>{education.degree}</h3>
 
 			<div class="time">
 				<!-- Date de début et de fin d'activité -->
@@ -35,6 +33,9 @@
 				{/if}
 			</div>
 
+			<!-- Nom de l'établissement et localisation -->
+			<h4>{education.institution} - {education.location}</h4>
+
 			{#if education.statement}
 				<small>
 					<!-- Situation de la formation (en cours, terminée, etc.) -->
@@ -42,8 +43,16 @@
 				</small>
 			{/if}
 
-			<!-- Description de la formation -->
-			<p>{@html education.description}</p>
+			<!-- Liste/description des activités réalisées durant la formation -->
+			{#if Array.isArray( education.description )}
+				<ul>
+					{#each education.description as description ( description )}
+						<li>{@html description}</li>
+					{/each}
+				</ul>
+			{:else}
+				<p>{@html education.description}</p>
+			{/if}
 		{/each}
 	</section>
 {/if}
@@ -56,7 +65,8 @@
 		font-size: 0.75rem;
 	}
 
-	p {
+	p,
+	li {
 		/* Description de la formation */
 		font-size: 0.875rem;
 	}

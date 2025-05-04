@@ -9,6 +9,9 @@ export interface ExperienceProperties
 	// Nom du poste occupé.
 	position: string;
 
+	// Lieu de l'entreprise (ville, pays).
+	location: string;
+
 	// Lien vers l'entreprise (si disponible).
 	link?: string;
 
@@ -19,5 +22,5 @@ export interface ExperienceProperties
 	endDate?: string;
 
 	// Description de l'expérience.
-	description: string[];
+	description: string | string[];
 }
