@@ -1,0 +1,125 @@
+{
+	"locale": "fr",
+	"name": "Florian Trayon",
+	"job": "Développeur Web Full-Stack",
+	"email": "floriantrayon942@gmail.com",
+	"phone": "06.80.56.44.60",
+	"address": "Cannes, France",
+	"birthDate": "1999-08-08",
+	"languages": ["fr", "en"],
+	"hasVehicle": true,
+	"description": "Jeune passionné par les nouvelles technologies et actuellement en poste dans une entreprise concevant des applications Web destinées aux professionnels des mutuelles et complémentaires santé.",
+	"translations": {
+		"profile": "Profil",
+		"skills": "Compétences",
+		"certifications": "Certifications",
+		"experiences": "Expériences professionnelles",
+		"educations": "Formations",
+		"hobbies": "Centres d'intérêt",
+		"present": "Présent",
+		"licence": "Véhiculé",
+		"export": "Exporter au format PDF"
+	},
+	"websites": [
+		{ "name": "GitHub", "url": "https://github.com/FlorianLeChat" },
+		{ "name": "LinkedIn", "url": "https://www.linkedin.com/in/florian-trayon/" },
+		{ "name": "Portfolio", "url": "https://www.florian-trayon.fr" }
+	],
+	"skills": [
+		{
+			"name": "Langages",
+			"data": ["HTML", "CSS", "SASS", "JavaScript", "TypeScript", "PHP", "SQL", "Markdown", "Lua"]
+		},
+		{
+			"name": "Frameworks",
+			"data": ["NodeJS", "React", "NextJS", "jQuery", "Svelte(Kit)", "Symfony", "TailwindCSS"]
+		},
+		{
+			"name": "Bases de données",
+			"data": ["MySQL/MariaDB", "Oracle", "MongoDB", "SQLite"]
+		},
+		{
+			"name": "Outils",
+			"data": ["Git", "RabbitMQ", "Mantis", "Proxmox", "Apache", "Nginx", "Traefik", "Google Analytics", "Docker", "Ansible"]
+		},
+		{
+			"name": "Autres",
+			"data": ["Wordpress", "Visual Studio (Code)", "PHPStorm", "FileZilla", "Linux (Debian, CentOS)", "Windows", "MacOS"]
+		}
+	],
+	"experiences": [
+		{
+			"link": "https://univ-cotedazur.fr/",
+			"company": "Université Côte d'Azur",
+			"location": "Sophia Antipolis, France",
+			"position": "Développeur Web Full-Stack (stage)",
+			"startDate": "2022-05-01",
+			"endDate": "2022-08-31",
+			"description": [
+				"Conception et développement d'un site Internet basé sur le jeu de plateau <i>Domego</i>.",
+				"Collaboration avec l'équipe de conception originale pour les éléments graphiques et les fonctionnalités de jeu afin d'assurer une expérience utilisateur cohérente.",
+				"Mise en œuvre d'une architecture <i>full-stack</i> en utilisant <b>React</b> pour la partie <i>front-end</i> puis <b>NodeJS</b> et <b>MongoDB</b> comme logique <i>back-end</i> avec la base de données.",
+				"Optimisation des performances avec tests unitaires et end-to-end (E2E)."
+			]
+		},
+		{
+			"link": "https://manga-paradise.fr/",
+			"company": "Manga Paradise",
+			"location": "Nice, France",
+			"position": "Webmaster – Développeur PHP / WordPress (bénévolat)",
+			"startDate": "2022-12-01",
+			"endDate": "2023-05-31",
+			"description": [
+				"Conception et développement d'un site Internet vitrine novateur pour l'association « Manga Paradise », mettant en avant la culture des mangas et du Japon. Utilisation de <b>WordPress</b> comme plateforme de création de contenu pour assurer une expérience fluide.",
+				"Responsable de l'hébergement du site, y compris la configuration des paramètres techniques et la gestion de la performance pour garantir une expérience utilisateur optimale à tous les visiteurs."
+			]
+		},
+		{
+			"link": "https://ciblemut.net/",
+			"company": "Ciblemut",
+			"location": "Sophia Antipolis, France",
+			"position": "Développeur Web Full-Stack",
+			"startDate": "2024-03-01",
+			"description": [
+				"Conception, amélioration et maintenance de sites Internet destinés aux professionnels des mutuelles et complémentaires santé, en utilisant les langages <b>JavaScript, TypeScript, NodeJS, SvelteKit, HTML, CSS/SASS, PHP</b>. Déploiement réalisé avec <b>GitLab CI, Docker, Apache, Ansible</b>, et <b>Traefik</b>, et utilisation des bases de données <b>MySQL, SQLite, Oracle</b>.",
+				"Migration réussie de la documentation en ligne des applications Web de l'entreprise, passant de <b>PicoCMS à Docusaurus</b>. Responsable de la configuration du <i>framework</i>, du transfert des contenus textuels, et de l'établissement d'un pipeline <b>CI/CD</b> sur <b>GitLab</b> pour assurer le déploiement des mises à jour automatiques de la documentation.",
+				"Création et implémentation d'un système de design sur <b>Figma</b>, suivi de l'intégration sémantique <b>HTML/CSS</b> de la charte graphique basée sur le <i>framework</i> <b>Bootstrap</b> sur diverses applications Web déjà existantes.",
+				"Participation à la création d'une application interne de suivi et de gestion des mises en recette des applications clients, en utilisant les <i>framework</i> <b>Bootstrap</b> et <b>SvelteKit</b> pour l'interface graphique, ainsi que <b>PHP</b> et <b>SQLite</b> pour la gestion des données.",
+				"Mise en place d'une solution centralisée de journalisation des applications de l'entreprise en s'appuyant sur <b>Fluent Bit</b>, <b>Graylog</b> et <b>Traefik</b>.",
+				"Réalisation d'analyses de jeux de données en utilisant <b>Power BI</b> et le <i>framework</i> <b>Evidence</b>.",
+				"Création et maintenance d'environnements de déploiement virtualisés en utilisant <b>GitLab CI, Ansible</b> et <b>Proxmox</b>.",
+				"Gestion complète du déploiement des versions de tests, de la mise en production, ainsi que du support par tickets (via <b>Mantis</b>) des applications Web à destination des clients."
+			]
+		}
+	],
+	"educations": [
+		{
+			"institution": "Université Côte d'Azur",
+			"degree": "Master 1, Méthodes informatiques appliquées à la gestion des entreprises",
+			"location": "Sophia Antipolis (Campus SophiaTech), France",
+			"startDate": "2022-09-01",
+			"endDate": "2023-06-01",
+			"description": [
+				"Enseignements en <b>HTML/CSS, TypeScript, Angular, bases de données (MongoDB, Oracle), Java (Spring Boot)</b>, projets de recherche, outils mathématiques pour les systèmes <b>Big Data, IOT</b>, analyse financière des entreprises, management et veille technologique.",
+				"Création de <b>trois projets d'études</b> : une application de <b>gestion des devoirs</b> distribués par l'équipe enseignante (<i>Assignment Manager</i>), une application de <b>contrôle des présences et des absences des étudiants</b> pour l'ensemble de leur cursus universitaire (<i>Digital Identity</i>) et une application de <b>construction d'arbres généalogiques</b> (<i>Genio</i>)."
+			]
+		},
+		{
+			"institution": "Université Côte d'Azur",
+			"degree": "Licence 3 professionnelle, Métiers de l'informatique : applications Web",
+			"location": "Nice (Campus Carlone), France",
+			"startDate": "2021-09-01",
+			"endDate": "2022-06-01",
+			"description": [
+				"Enseignements en <b>HTML/CSS/SASS, PHP, Symfony/Twig, JavaScript, jQuery/AJAX, CMS (Wordpress), Bootstrap, Ergonomie, Web Design, SEO</b>, base de données (<b>MySQL/PHPMyAdmin</b>), projets et droit International.",
+				"Création d'un portfolio sous forme d'un site Internet.",
+				"Projet tuteuré « <i>Source Web Console</i> », une <b>interface d'administration</b> pour serveurs de jeux en ligne utilisant le protocole de communication « <i>RCON</i> » de Valve."
+			]
+		}
+	],
+	"hobbies": [
+		"🚆 <b>Passionné par le monde ferroviaire</b>, je m'intéresse autant à l'histoire des chemins de fer qu'aux technologies actuelles de transport, en particulier les innovations dans le domaine du rail.",
+		"📸 <b>Photographie argentique</b> : adepte du rendu authentique et des imperfections esthétiques propres à l'argentique, je privilégie une approche artistique à la précision technique du numérique.",
+		"🕹️ <b>Jeux vidéo sur ordinateur</b> : joueur de longue date, je suis particulièrement investi dans les jeux de stratégie, de simulation et de jeu de rôle (RP), qui développent la réflexion, l'organisation et la créativité."
+	]
+}

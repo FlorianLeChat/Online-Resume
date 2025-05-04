@@ -1,0 +1,107 @@
+{
+	"locale": "en",
+	"name": "John Doe",
+	"job": "Developer",
+	"email": "john@doe.com",
+	"phone": "123-456-7890",
+	"address": "123 Main St, City, Country",
+	"birthDate": "1990-01-01",
+	"languages": ["en", "es", "fr"],
+	"hasVehicle": true,
+	"description": "A passionate developer with experience in web development and a strong background in software engineering. I enjoy creating user-friendly applications and solving complex problems.",
+	"translations": {
+		"profile": "Profile",
+		"skills": "Skills",
+		"certifications": "Certifications",
+		"experiences": "Experiences",
+		"educations": "Educations",
+		"hobbies": "Hobbies",
+		"present": "Present",
+		"licence": "Driving licence",
+		"export": "Export to PDF"
+	},
+	"websites": [
+		{ "name": "GitHub", "url": "https://github.com" },
+		{ "name": "LinkedIn", "url": "https://linkedin.com" },
+		{ "name": "Website", "url": "https://example.com" }
+	],
+	"skills": [
+		{
+			"name": "Languages",
+			"data": ["HTML", "CSS", "JavaScript", "PHP", "Python"]
+		},
+		{
+			"name": "Frameworks",
+			"data": ["Express", "React", "Vue", "Svelte"]
+		},
+		{
+			"name": "Database",
+			"data": ["MySQL", "MongoDB", "SQLite"]
+		},
+		{
+			"name": "Tools",
+			"data": ["Git", "Webpack", "Babel", "npm", "Yarn"]
+		},
+		{
+			"name": "Other",
+			"data": ["GraphQL", "REST", "WebSockets", "Docker"]
+		}
+	],
+	"certifications": [
+		{
+			"name": "Certified JavaScript Developer",
+			"issuer": "JavaScript Institute",
+			"date": "2021-01-01",
+			"link": "https://jsinstitute.com/certificates/123456"
+		},
+		{
+			"name": "Certified React Developer",
+			"issuer": "React Academy",
+			"date": "2022-01-01",
+			"link": "https://reactacademy.com/certificates/654321"
+		}
+	],
+	"experiences": [
+		{
+			"link": "https://company-a.com",
+			"company": "Company A",
+			"location": "City, Country",
+			"position": "Frontend Developer",
+			"startDate": "2020-01-01",
+			"endDate": "2021-01-01",
+			"description": [
+				"Worked on frontend projects using <b>React</b> and <b>Vue</b>.",
+				"Collaborated with designers to create user-friendly interfaces.",
+				"Implemented responsive design and cross-browser compatibility."
+			]
+		},
+		{
+			"link": "https://company-b.com",
+			"company": "Company B",
+			"location": "City, Country",
+			"position": "Backend Developer",
+			"startDate": "2021-02-01",
+			"description": [
+				"Developed RESTful APIs using <b>Express</b> and <b>Node.js</b>.",
+				"Worked with <b>MongoDB</b> and <b>MySQL</b> databases.",
+				"Implemented authentication and authorization."
+			]
+		}
+	],
+	"educations": [
+		{
+			"institution": "University A",
+			"degree": "Bachelor of Science in Computer Science",
+			"location": "City, Country",
+			"startDate": "2015-01-01",
+			"endDate": "2019-01-01",
+			"statement": "Graduated with honors",
+			"description": "Studied computer science with a focus on <b>software development</b>. Participated in various projects and internships."
+		}
+	],
+	"hobbies": [
+		"📚 Enjoy <b>reading</b> books on technology and science fiction.",
+		"✈️ Love to <b>travel</b> and explore new cultures.",
+		"🕹️ Avid <b>gamer</b>, especially in strategy and RPG games."
+	]
+}
