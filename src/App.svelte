@@ -12,6 +12,7 @@
 	import Experiences from "./components/Experiences.svelte";
 	import Educations from "./components/Educations.svelte";
 	import Hobbies from "./components/Hobbies.svelte";
+	import PrintButton from "./components/PrintButton.svelte";
 
 	// Récupération de la configuration.
 	const configuration: ConfigurationProperties = data;
@@ -41,4 +42,7 @@
 
 	<!-- Loisirs -->
 	<Hobbies />
+
+	<!-- Bouton d'impression -->
+	<PrintButton />
 </main>
