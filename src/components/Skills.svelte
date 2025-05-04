@@ -13,7 +13,7 @@
 		<h2>{translations.skills}</h2>
 
 		<ul>
-			{#each configuration.skills as skill ( skill.name )}
+			{#each configuration.skills as skill ( skill )}
 				<li>
 					<u>{skill.name}</u> : <code>{skill.data.join( ", " )}</code>
 				</li>

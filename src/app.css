@@ -41,12 +41,21 @@ section h2
 	margin-bottom: 0.5cm;
 }
 
-section h3 {
+section h3
+{
 	/* Intitulé de sous-section */
 	display: inline;
 	font-size: 1rem;
 	margin-top: 1rem;
-	margin-bottom: 0.5rem;
+}
+
+section h4
+{
+	/* Intitulé de sous-sous-section */
+	margin: 0 0 0.1rem 0;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 0.85rem;
 }
 
 section a {

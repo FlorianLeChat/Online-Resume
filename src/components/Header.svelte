@@ -62,7 +62,7 @@
 	{#if configuration.websites}
 		<ul>
 			<!-- Accès vers les liens sociaux et personnels -->
-			{#each configuration.websites as website, index ( website.url )}
+			{#each configuration.websites as website, index ( website )}
 				{#if index > 0}
 					<li class="space">&nbsp;|</li>
 				{/if}

@@ -15,16 +15,14 @@
 	<section>
 		<h2>{translations.experiences}</h2>
 
-		{#each experiences as experience ( experience.company )}
+		{#each experiences as experience ( experience )}
 			{@const startDate = formatDate( experience.startDate )}
 			{@const endDate = experience.endDate
 				? formatDate( experience.endDate )
 				: ""}
 
-			<h3>
-				<!-- Intitulé du poste et nom de l'entreprise -->
-				{experience.position}, {experience.company}
-			</h3>
+			<!-- Intitulé du poste -->
+			<h3>{experience.position}</h3>
 
 			<div class="time">
 				<!-- Date de début et de fin d'activité -->
@@ -42,6 +40,9 @@
 				{calculateDuration( experience.startDate, experience.endDate )}
 			</div>
 
+			<!-- Nom de l'entreprise et localisation -->
+			<h4>{experience.company} - {experience.location}</h4>
+
 			<!-- Lien vers le site de l'entreprise -->
 			{#if experience.link}
 				<a
@@ -53,19 +54,24 @@
 				</a>
 			{/if}
 
-			<ul>
-				<!-- Liste des activités réalisées dans le cadre de l'expérience -->
-				{#each experience.description as description ( description )}
-					<li>{@html description}</li>
-				{/each}
-			</ul>
+			<!-- Liste/description des activités réalisées dans le cadre de l'expérience -->
+			{#if Array.isArray( experience.description )}
+				<ul>
+					{#each experience.description as description ( description )}
+						<li>{@html description}</li>
+					{/each}
+				</ul>
+			{:else}
+				<p>{@html experience.description}</p>
+			{/if}
 		{/each}
 	</section>
 {/if}
 
 <style>
+	p,
 	li {
-		/* Description de l'expérience */
+		/* Description de la formation */
 		font-size: 0.875rem;
 	}
 </style>

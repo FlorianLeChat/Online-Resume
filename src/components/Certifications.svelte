@@ -14,7 +14,7 @@
 	<section>
 		<h2>{translations.certifications}</h2>
 
-		{#each configuration.certifications as certification ( certification.issuer )}
+		{#each configuration.certifications as certification ( certification )}
 			<h3>
 				<!-- Intitulé de la certification et nom de l'organisme -->
 				{certification.name}, {certification.issuer}

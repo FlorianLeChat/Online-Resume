@@ -9,6 +9,9 @@ export interface EducationProperties
 	// Nom du diplôme obtenu.
 	degree: string;
 
+	// Lieu de l'établissement (ville, pays).
+	location: string;
+
 	// Date de début de la formation au format ISO 8601 (YYYY-MM-DD).
 	startDate: string;
 
@@ -19,5 +22,5 @@ export interface EducationProperties
 	statement: string;
 
 	// Description de la formation.
-	description: string;
+	description: string | string[];
 }
