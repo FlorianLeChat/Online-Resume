@@ -1,14 +1,23 @@
-<script>
+<script lang="ts">
 	// Importation des dépendances et composants.
-	import config from "../data/default.json";
+	import data from "../data/default.json";
+	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+
+	// Récupération de la configuration et des traductions.
+	const configuration: ConfigurationProperties = data;
+	const translations = configuration.translations;
 </script>
 
-<section>
-	<h2>Compétences</h2>
+{#if configuration.skills}
+	<section>
+		<h2>{translations.skills}</h2>
 
-	<ul>
-		{#each config.skills as skill ( skill.name )}
-			<li><u>{skill.name}</u> : <code>{skill.data.join( ", " )}</code></li>
-		{/each}
-	</ul>
-</section>
+		<ul>
+			{#each configuration.skills as skill ( skill.name )}
+				<li>
+					<u>{skill.name}</u> : <code>{skill.data.join( ", " )}</code>
+				</li>
+			{/each}
+		</ul>
+	</section>
+{/if}

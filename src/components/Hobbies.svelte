@@ -1,15 +1,22 @@
-<script>
+<script lang="ts">
 	// Importation des dépendances et composants.
-	import config from "../data/default.json";
+	import data from "../data/default.json";
+	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+
+	// Récupération de la configuration et des traductions.
+	const configuration: ConfigurationProperties = data;
+	const translations = configuration.translations;
 </script>
 
-<section>
-	<h2>Loisirs</h2>
+{#if configuration.hobbies}
+	<section>
+		<h2>{translations.hobbies}</h2>
 
-	{#each config.hobbies as hobby ( hobby )}
-		<p>{@html hobby}</p>
-	{/each}
-</section>
+		{#each configuration.hobbies as hobby ( hobby )}
+			<p>{@html hobby}</p>
+		{/each}
+	</section>
+{/if}
 
 <style>
 	p {

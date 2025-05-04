@@ -1,6 +1,9 @@
-<script>
-	// Importation des dépendances et composants.
-	import config from "./data/default.json";
+<script lang="ts">
+	// Importation des dépendances.
+	import data from "./data/default.json";
+	import type { ConfigurationProperties } from "./interfaces/ConfigurationProperties";
+
+	// Importation des composants.
 	import GitHubCorner from "./components/GitHubCorner.svelte";
 	import Header from "./components/Header.svelte";
 	import Profile from "./components/Profile.svelte";
@@ -9,9 +12,12 @@
 	import Experiences from "./components/Experiences.svelte";
 	import Educations from "./components/Educations.svelte";
 	import Hobbies from "./components/Hobbies.svelte";
+
+	// Récupération de la configuration.
+	const configuration: ConfigurationProperties = data;
 </script>
 
-<main lang={config.locale}>
+<main lang={configuration.locale}>
 	<!-- Logo GitHub -->
 	<GitHubCorner />
 
@@ -22,27 +28,17 @@
 	<Profile />
 
 	<!-- Compétences de la personne -->
-	{#if config.skills?.length > 0}
-		<Skills />
-	{/if}
+	<Skills />
 
 	<!-- Certifications obtenues -->
-	{#if config.certifications?.length > 0}
-		<Certifications />
-	{/if}
+	<Certifications />
 
 	<!-- Expériences professionnelles -->
-	{#if config.experiences?.length > 0}
-		<Experiences />
-	{/if}
+	<Experiences />
 
 	<!-- Formations scolaires -->
-	{#if config.educations?.length > 0}
-		<Educations />
-	{/if}
+	<Educations />
 
 	<!-- Loisirs -->
-	{#if config.hobbies?.length > 0}
-		<Hobbies />
-	{/if}
+	<Hobbies />
 </main>

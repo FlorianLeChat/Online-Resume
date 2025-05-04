@@ -1,7 +1,12 @@
 <script lang="ts">
 	// Importation des dépendances et composants.
 	import Link from "./Link.svelte";
-	import config from "../data/default.json";
+	import data from "../data/default.json";
+	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+
+	// Récupération de la configuration et des traductions.
+	const configuration: ConfigurationProperties = data;
+	const translations = configuration.translations;
 
 	// Calcul de l'âge à partir de la date de naissance.
 	const getAge = ( birthDate: string ) =>
@@ -15,14 +20,14 @@
 
 <header>
 	<!-- Nom et prénom de la personne -->
-	<h1>{config.name}</h1>
+	<h1>{configuration.name}</h1>
 
 	<!-- Titre du poste recherché -->
-	<p>{config.job}</p>
+	<p>{configuration.job}</p>
 
-	{#if config.languages?.length > 0}
+	{#if configuration.languages}
 		<!-- Langues parlées -->
-		{#each config.languages as language ( language )}
+		{#each configuration.languages as language ( language )}
 			{#if language === "en"}
 				<span class="fi fi-gb"></span>
 			{:else}
@@ -33,24 +38,36 @@
 
 	<ul>
 		<!-- Informations de contact -->
-		<li>📧 <a href="mailto:{config.email}">{config.email}</a> |</li>
-		<li>📞 <a href="tel:{config.phone}">{config.phone}</a> |</li>
-		<li>📍 {config.address} |</li>
-		<li>🎂 {getAge( config.birthDate )} ans</li>
-		{#if config.hasVehicle}
-			<li>| 🚗 Véhiculé</li>
+		<li>
+			📧 <a href="mailto:{configuration.email}">{configuration.email}</a> |
+		</li>
+
+		<li>
+			📞 <a href="tel:{configuration.phone}">{configuration.phone}</a> |
+		</li>
+
+		<li>
+			📍 {configuration.address} |
+		</li>
+
+		<li>
+			🎂 {getAge( configuration.birthDate )} ans
+		</li>
+
+		{#if configuration.hasVehicle}
+			<li>| 🚗 {translations.licence}</li>
 		{/if}
 	</ul>
 
-	{#if config.links?.length > 0}
+	{#if configuration.websites}
 		<ul>
 			<!-- Accès vers les liens sociaux et personnels -->
-			{#each config.links as link, index ( link )}
+			{#each configuration.websites as website, index ( website.url )}
 				{#if index > 0}
 					<li class="space">&nbsp;|</li>
 				{/if}
 
-				<li><Link title={link.name} url={link.url} /></li>
+				<li><Link title={website.name} url={website.url} /></li>
 			{/each}
 		</ul>
 	{/if}
