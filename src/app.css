@@ -60,10 +60,11 @@ section a {
 	text-underline-offset: 2px;
 }
 
-section small.time {
+section div.time {
 	/* Date de section */
 	float: right;
 	font-size: 0.85rem;
+	text-align: right;
 	margin-left: auto;
 }
 
