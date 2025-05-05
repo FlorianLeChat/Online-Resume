@@ -19,7 +19,7 @@ export interface EducationProperties
 	endDate?: string;
 
 	// État de la formation (en cours, terminée, etc.).
-	statement: string;
+	statement?: string;
 
 	// Description de la formation.
 	description: string | string[];
