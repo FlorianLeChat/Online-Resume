@@ -4,11 +4,11 @@
 
 ### Introduction
 
-En poste en entreprise depuis un peu plus d'un an, j'ai souhaité actualiser mon CV afin d'y intégrer les compétences, expériences et informations acquises récemment. Plutôt que de mettre à jour mon diaporama PowerPoint habituel qui me sert de CV, j'ai eu l'idée de créer un site Internet faisant office de CV en ligne. Réalisé en quelques jours, ce projet, sans prétention sur le plan des fonctionnalités, repose néanmoins sur trois objectifs principaux :
+En poste en entreprise depuis un peu plus d'un an, j'ai souhaité actualiser mon *curriculum vitae* (CV) afin d'y intégrer les compétences, expériences et informations acquises récemment. Plutôt que de mettre à jour mon diaporama PowerPoint habituel qui me sert de CV, j'ai eu l'idée de créer un site Internet faisant office de CV en ligne. Réalisé en quelques jours grâce au *framework* [Svelte](https://svelte.dev/) ✨, ce projet, sans prétention sur le plan des fonctionnalités, repose néanmoins sur trois objectifs principaux :
 
-1. Offrir une personnalisation rapide, même pour les personnes disposant de peu de connaissances techniques ;
-2. Garantir une lecture simple et agréable pour les recruteurs ou tout autre visiteur ;
-3. Proposer un site dynamique, capable de s'adapter à différents supports (ordinateur, mobile, export en PDF, etc.).
+1. Offrir une **personnalisation rapide**, même pour les personnes disposant de peu de connaissances techniques ;
+2. Garantir une **lecture simple et agréable** pour les recruteurs ou tout autre visiteur ;
+3. Proposer un **site dynamique**, capable de s'adapter à différents supports (ordinateur, mobile, export en PDF, etc.).
 
 Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, qui permet de modifier facilement l'ensemble des contenus sans toucher au code source. Le deuxième est rempli à travers une mise en page épurée, inspirée des CV traditionnels réalisés réalisé sous Word ou Figma. Enfin, le troisième a été concrétisé par l'intégration de QR codes et d'icônes, facilitant l'accès aux liens lors d'une impression ou d'une exportation en PDF, bien plus efficacement que de simples URL en texte brut.
 
@@ -45,11 +45,11 @@ Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, q
 
 ### Introduction
 
-After working for a company for a little over a year, I wanted to update my resume to include recently acquired skills, experience and contact information. Instead of updating my usual PowerPoint slideshow, which serves as my resume, I came up with the idea of creating a website to act as an online resume. Completed in just a few days, this project, unpretentious in terms of functionalities, is nevertheless based on three main objectives:
+After working for a company for a little over a year, I wanted to update my resume to include recently acquired skills, experience and contact information. Instead of updating my usual PowerPoint slideshow, which serves as my resume, I came up with the idea of creating a website to act as an online resume. Completed in just a few days thanks to [Svelte](https://svelte.dev/) ✨, this project, unpretentious in terms of functionalities, is nevertheless based on three main objectives:
 
-1. Fast customization, even for people with little technical knowledge ;
-2. Ensure easy, pleasant reading for recruiters and other visitors ;
-3. Offer a dynamic site, capable of adapting to different media (computer, mobile, PDF export, etc.).
+1. **Fast customization**, even for people with little technical knowledge ;
+2. **Ensure easy, pleasant reading** for recruiters and other visitors ;
+3. Offer a **dynamic site**, capable of adapting to different media (computer, mobile, PDF export, etc.).
 
 The first target has been achieved by using a JSON file, which makes it easy to modify all content without altering the source code. The second was fulfilled through a streamlined layout, inspired by traditional resumes created in Word or Figma. Finally, the third has been realized by integrating QR codes and icons, making links easier to access when printing or exporting to PDF, much more efficiently than simple plain-text URLs.
 
