@@ -18,12 +18,21 @@ main
 {
 	/* Conteneur général */
 	color: rgb(51, 51, 51);
-	width: 21cm;
 	margin: 1cm auto;
 	padding: 2cm;
+	max-width: 21cm;
 	min-height: 29.7cm;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 	background-color: white;
+}
+
+@media screen and (max-width: 768px)
+{
+	main
+	{
+		/* Sur les terminaux mobiles, pas besoin de grosses marges */
+		padding: 1cm;
+	}
 }
 
 section
@@ -53,9 +62,9 @@ section h4
 {
 	/* Intitulé de sous-sous-section */
 	margin: 0 0 0.1rem 0;
+	font-size: 0.85rem;
 	font-style: italic;
 	font-weight: normal;
-	font-size: 0.85rem;
 }
 
 section a {
