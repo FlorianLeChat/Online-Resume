@@ -22,14 +22,14 @@ Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, q
 
 #### Développement local
 
-- Installer [NodeJS LTS](https://nodejs.org/) (>18 ou plus) ;
+- Installer [NodeJS LTS](https://nodejs.org/) (>20 ou plus) ;
 - Installer les dépendances du projet avec la commande `npm install` ;
 - Démarrer le serveur local Vite avec la commande `npm run dev` ;
 - Modifier le fichier `src/data/default.json` pour changer le contenu du site Internet en vous aidant du fichier `src/data/_example.json`.
 
 #### Déploiement en production
 
-- Installer [NodeJS LTS](https://nodejs.org/) (>18 ou plus) ;
+- Installer [NodeJS LTS](https://nodejs.org/) (>20 ou plus) ;
 - Installer les dépendances du projet avec la commande `npm install` ;
 - Modifier le fichier `src/data/default.json` pour changer le contenu du site Internet en vous aidant du fichier `src/data/_example.json` ;
 - Compiler les fichiers statiques du site Internet avec la commande `npm run build` ;
@@ -63,14 +63,14 @@ The first target has been achieved by using a JSON file, which makes it easy to 
 
 #### Local development
 
-- Install [NodeJS LTS](https://nodejs.org/) (>18 or higher) ;
+- Install [NodeJS LTS](https://nodejs.org/) (>20 or higher) ;
 - Install project dependencies using `npm install` ;
 - Start Vite local server using `npm run dev` ;
 - Edit `src/data/default.json` to change the website content, using the `src/data/_example.json` file as a reference.
 
 #### Production deployment
 
-- Install [NodeJS LTS](https://nodejs.org/) (>18 or higher) ;
+- Install [NodeJS LTS](https://nodejs.org/) (>20 or higher) ;
 - Install project dependencies using `npm install` ;
 - Edit `src/data/default.json` to change the website content, using the `src/data/_example.json` file as a reference ;
 - Build static website files using `npm run build` ;
