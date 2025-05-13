@@ -20,6 +20,7 @@
     "qrcode": "~1.5",
     "eslint": "~9.26",
     "svelte": "~5.28",
+    "cspell": "~8.19",
     "globals": "~16.0",
     "date-fns": "~4.1",
     "prettier": "~3.5",
@@ -29,6 +30,7 @@
     "svelte-check": "~4.1",
     "@tsconfig/svelte": "~5.0",
     "typescript-eslint": "~8.32",
+    "@cspell/dict-fr-fr": "~2.3",
     "eslint-plugin-svelte": "~3.5",
     "prettier-plugin-svelte": "~3.3",
     "@stylistic/eslint-plugin": "~4.2",
@@ -46,7 +48,8 @@
     "pretty": "prettier --write \"**/*.{js,ts,svelte}\"",
     "preview": "vite preview",
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "check-spell": "cspell src/data/*.json --show-context --show-suggestions"
   },
   "browserslist": [
     "defaults"
