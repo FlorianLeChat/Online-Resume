@@ -17,53 +17,57 @@
 
 		{#each experiences as experience ( experience )}
 			{@const startDate = formatDate( experience.startDate )}
-			{@const endDate = experience.endDate
-				? formatDate( experience.endDate )
-				: ""}
+			{@const endDate = experience.endDate ? formatDate( experience.endDate ) : ""}
+			{@const duration = calculateDuration( experience.startDate, experience.endDate )}
 
-			<!-- Intitulé du poste -->
-			<h3>{experience.position}</h3>
+			<article>
+				<!-- En-tête de la section d'expérience -->
+				<header>
+					<!-- Intitulé du poste -->
+					<h3>{experience.position}</h3>
 
-			<div class="time">
-				<!-- Date de début et de fin d'activité -->
-				{#if experience.endDate}
-					<time datetime={startDate}>{startDate}</time>
-					-
-					<time datetime={endDate}>{endDate}</time>
+					<div class="time">
+						<!-- Date de début et de fin d'activité -->
+						{#if experience.endDate}
+							<time datetime={startDate}>{startDate}</time>
+							-
+							<time datetime={endDate}>{endDate}</time>
+						{:else}
+							<time datetime={startDate}>{startDate}</time> - {translations.present}
+						{/if}
+
+						<br />
+
+						<!-- Durée de l'activité -->
+						{duration}
+					</div>
+
+					<!-- Nom de l'entreprise et localisation -->
+					<h4>{experience.company} - {experience.location}</h4>
+
+					<!-- Lien vers le site de l'entreprise -->
+					{#if experience.link}
+						<a
+							rel="noopener noreferrer"
+							href={experience.link}
+							target="_blank"
+						>
+							{experience.link}
+						</a>
+					{/if}
+				</header>
+
+				<!-- Liste/description des activités réalisées dans le cadre de l'expérience -->
+				{#if Array.isArray( experience.description )}
+					<ul>
+						{#each experience.description as description ( description )}
+							<li>{@html description}</li>
+						{/each}
+					</ul>
 				{:else}
-					<time datetime={startDate}>{startDate}</time> - {translations.present}
+					<p>{@html experience.description}</p>
 				{/if}
-
-				<br />
-
-				<!-- Durée de l'activité -->
-				{calculateDuration( experience.startDate, experience.endDate )}
-			</div>
-
-			<!-- Nom de l'entreprise et localisation -->
-			<h4>{experience.company} - {experience.location}</h4>
-
-			<!-- Lien vers le site de l'entreprise -->
-			{#if experience.link}
-				<a
-					rel="noopener noreferrer"
-					href={experience.link}
-					target="_blank"
-				>
-					{experience.link}
-				</a>
-			{/if}
-
-			<!-- Liste/description des activités réalisées dans le cadre de l'expérience -->
-			{#if Array.isArray( experience.description )}
-				<ul>
-					{#each experience.description as description ( description )}
-						<li>{@html description}</li>
-					{/each}
-				</ul>
-			{:else}
-				<p>{@html experience.description}</p>
-			{/if}
+			</article>
 		{/each}
 	</section>
 {/if}
