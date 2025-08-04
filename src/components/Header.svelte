@@ -2,6 +2,7 @@
 	// Importation des dépendances et composants.
 	import Link from "./Link.svelte";
 	import data from "../data/default.json";
+	import { SvelteDate } from "svelte/reactivity";
 	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
 
 	// Récupération de la configuration et des traductions.
@@ -11,7 +12,7 @@
 	// Calcul de l'âge à partir de la date de naissance.
 	const getAge = ( birthDate: string ) =>
 	{
-		const date = new Date();
+		const date = new SvelteDate();
 		date.setTime( date.getTime() - Date.parse( birthDate ) );
 
 		return date.getFullYear() - 1970;
