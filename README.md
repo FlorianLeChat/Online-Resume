@@ -85,7 +85,7 @@ The first target has been achieved by using a JSON file, which makes it easy to 
 - Install project dependencies using `npm install` ;
 - Edit `src/data/default.json` to change the website content, using the `src/data/_example.json` file as a reference ;
 - Build static website files using `npm run build` ;
-- Remove development dependencies using `npm prune --production` ;
+- Remove development dependencies using `npm prune --omit=dev` ;
 - Use a web server to serve the static files generated in the previous step.
 
 > [!TIP]
