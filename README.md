@@ -13,7 +13,7 @@
 ## In French
 
 > [!IMPORTANT]
-> Depuis mars 2026, le code du projet est désormais hébergé sur mon instance GitLab personnalisée, accessible à [cette adresse](https://git.florian-dev.fr/floriantrayon/Homepage). Le dépôt GitHub est un miroir du dépôt GitLab, **mis à jour automatiquement**.
+> Depuis mars 2026, le code du projet est désormais hébergé sur mon instance GitLab personnalisée, accessible à [cette adresse](https://git.florian-dev.fr/floriantrayon/Online-Resume). Le dépôt GitHub est un miroir du dépôt GitLab, **mis à jour automatiquement**.
 >
 > **Les contributions publiques restent sur GitHub et sont les bienvenues** ; les pull requests validées y seront ensuite transférées manuellement sur GitLab pour être intégrées. 🙂
 
@@ -53,7 +53,7 @@ Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, q
 ## In English
 
 > [!IMPORTANT]
-> Since March 2026, the project's code has been hosted on my custom GitLab instance, accessible at [this address](https://git.florian-dev.fr/floriantrayon/Homepage). The GitHub repository is a mirror of the GitLab repository, **automatically kept up to date**.
+> Since March 2026, the project's code has been hosted on my custom GitLab instance, accessible at [this address](https://git.florian-dev.fr/floriantrayon/Online-Resume). The GitHub repository is a mirror of the GitLab repository, **automatically kept up to date**.
 >
 > **Public contributions remain on GitHub and are welcome**; validated pull requests will then be manually transferred to GitLab to be integrated. 🙂
 
