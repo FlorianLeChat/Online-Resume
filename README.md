@@ -92,4 +92,3 @@ The first target has been achieved by using a JSON file, which makes it easy to 
 - Use a web server to serve the static files generated in the previous step.
 
 ![image](./.gitlab/images/online-resume.png)
-![image](https://github.com/user-attachments/assets/7ab5f04c-e97a-4ce1-b05e-02f593ed08e8)
