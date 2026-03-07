@@ -1,10 +1,8 @@
 <script lang="ts">
-	// Importation des dépendances et composants.
 	import data from "../data/default.json";
 	import { calculateDuration, formatDate } from "../utilities/date";
 	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
 
-	// Récupération de la configuration et des traductions.
 	const configuration: ConfigurationProperties = data;
 	const translations = configuration.translations;
 </script>
@@ -21,13 +19,10 @@
 			{@const duration = calculateDuration( experience.startDate, experience.endDate )}
 
 			<article>
-				<!-- En-tête de la section d'expérience -->
 				<header>
-					<!-- Intitulé du poste -->
 					<h3>{experience.position}</h3>
 
 					<div class="time">
-						<!-- Date de début et de fin d'activité -->
 						{#if experience.endDate}
 							<time datetime={startDate}>{startDate}</time>
 							-
@@ -38,14 +33,11 @@
 
 						<br />
 
-						<!-- Durée de l'activité -->
 						{duration}
 					</div>
 
-					<!-- Nom de l'entreprise et localisation -->
 					<h4>{experience.company} - {experience.location}</h4>
 
-					<!-- Lien vers le site de l'entreprise -->
 					{#if experience.link}
 						<a
 							rel="noopener noreferrer"
@@ -57,7 +49,6 @@
 					{/if}
 				</header>
 
-				<!-- Liste/description des activités réalisées dans le cadre de l'expérience -->
 				{#if Array.isArray( experience.description )}
 					<ul>
 						{#each experience.description as description ( description )}
@@ -75,7 +66,6 @@
 <style>
 	p,
 	li {
-		/* Description de la formation */
 		font-size: 0.875rem;
 	}
 </style>

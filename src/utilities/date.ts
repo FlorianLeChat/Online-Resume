@@ -2,9 +2,6 @@ import config from "../data/default.json";
 import { enGB, fr } from "date-fns/locale";
 import { intervalToDuration, formatDuration } from "date-fns";
 
-//
-// Mise en forme des dates en fonction d'une langue donnée.
-//
 export const formatDate = ( date: string ) =>
 {
 	return new Intl.DateTimeFormat( config.locale, {
@@ -13,13 +10,10 @@ export const formatDate = ( date: string ) =>
 	} ).format( new Date( date ) );
 };
 
-//
-// Calcul de la durée entre deux dates au format ISO 8601 (YYYY-MM-DD).
-//
 export const calculateDuration = ( start: string, end?: string ): string =>
 {
 	const endDate = end ? new Date( end ) : new Date();
-	endDate.setDate( endDate.getDate() + 1 ); // Pour éviter les décalages d'un jour.
+	endDate.setDate( endDate.getDate() + 1 ); // We want to include the current day in the duration, so we add one day to the end date.
 
 	const duration = intervalToDuration( {
 		start: new Date( start ),
@@ -27,7 +21,7 @@ export const calculateDuration = ( start: string, end?: string ): string =>
 	} );
 
 	return formatDuration( duration, {
-		locale: config.locale === "fr" ? fr : enGB, // Je ne peux pas faire mieux pour l'instant...
+		locale: config.locale === "fr" ? fr : enGB, // I can't do better than this, sorry.
 		format: [ "years", "months", "days" ],
 		delimiter: ", "
 	} );

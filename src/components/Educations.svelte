@@ -1,10 +1,8 @@
 <script lang="ts">
-	// Importation des dépendances et composants.
 	import data from "../data/default.json";
 	import { formatDate } from "../utilities/date";
 	import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
 
-	// Récupération de la configuration et des traductions.
 	const configuration: ConfigurationProperties = data;
 	const translations = configuration.translations;
 </script>
@@ -18,13 +16,10 @@
 			{@const endDate = education.endDate ? formatDate( education.endDate ) : ""}
 
 			<article>
-				<!-- En-tête de la section de formation -->
 				<header>
-					<!-- Intitulé de la formation -->
 					<h3>{education.degree}</h3>
 
 					<div class="time">
-						<!-- Date de début et de fin d'activité -->
 						{#if education.endDate}
 							<time datetime={startDate}>{startDate}</time>
 							-
@@ -34,18 +29,15 @@
 						{/if}
 					</div>
 
-					<!-- Nom de l'établissement et localisation -->
 					<h4>{education.institution} - {education.location}</h4>
 
 					{#if education.statement}
 						<small>
-							<!-- Situation de la formation (en cours, terminée, etc.) -->
 							{education.statement}
 						</small>
 					{/if}
 				</header>
 
-				<!-- Liste/description des activités réalisées durant la formation -->
 				{#if Array.isArray( education.description )}
 					<ul>
 						{#each education.description as description ( description )}
@@ -62,7 +54,6 @@
 
 <style>
 	small {
-		/* État de la formation (en cours, terminée, etc.) */
 		width: fit-content;
 		display: block;
 		font-size: 0.75rem;
@@ -70,7 +61,6 @@
 
 	p,
 	li {
-		/* Description de la formation */
 		font-size: 0.875rem;
 	}
 </style>

@@ -1,6 +1,3 @@
-//
-// Interface des traductions pour les différentes sections du CV.
-//
 export interface TranslationProperties
 {
 	profile: string;

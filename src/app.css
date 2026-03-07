@@ -1,13 +1,11 @@
 @page
 {
-	/* Apparence de page pour l'impression */
 	size: A4;
 	margin: 2cm;
 }
 
 body
 {
-	/* Contenu de la page */
 	margin: 0;
 	padding: 0;
 	font-family: system-ui, sans-serif;
@@ -16,7 +14,6 @@ body
 
 main
 {
-	/* Conteneur général */
 	color: rgb(51, 51, 51);
 	margin: 1cm auto;
 	padding: 2cm;
@@ -30,20 +27,17 @@ main
 {
 	main
 	{
-		/* Sur les terminaux mobiles, pas besoin de grosses marges */
 		padding: 1cm;
 	}
 }
 
 section
 {
-	/* Sections de la page */
 	margin-bottom: 2.25rem;
 }
 
 section h2
 {
-	/* Titres de section */
 	color: rgb(26, 124, 209);
 	font-size: 1.25rem;
 	border-bottom: 1px solid rgb(170, 170, 170);
@@ -52,7 +46,6 @@ section h2
 
 section h3
 {
-	/* Intitulé de sous-section */
 	display: inline;
 	font-size: 1rem;
 	margin-top: 1rem;
@@ -61,7 +54,6 @@ section h3
 
 section h4
 {
-	/* Intitulé de sous-sous-section */
 	margin: 0 0 0.1rem 0;
 	font-size: 0.85rem;
 	font-style: italic;
@@ -70,7 +62,6 @@ section h4
 
 section a
 {
-	/* Lien de section */
 	color: inherit;
 	width: fit-content;
 	display: block;
@@ -84,7 +75,6 @@ section a
 {
 	section header
 	{
-		/* En mode mobile, les en-têtes de section sont empilées */
 		display: flex;
 		flex-direction: column;
 	}
@@ -92,7 +82,6 @@ section a
 
 section div.time
 {
-	/* Date de section */
 	font-size: 0.85rem;
 }
 
@@ -100,7 +89,6 @@ section div.time
 {
 	section div.time
 	{
-		/* En mode desktop, la date de section est alignée à droite */
 		float: right;
 		text-align: right;
 		margin-left: auto;
@@ -111,7 +99,6 @@ section div.time
 {
 	body, main
 	{
-		/* Apparence de la page pour l'impression */
 		margin: 0;
 		padding: 0;
 		box-shadow: none;
@@ -120,7 +107,6 @@ section div.time
 
 	section a
 	{
-		/* Désactivation des liens de section en mode d'impression */
 		display: none;
 	}
 }
