@@ -1,14 +1,14 @@
 # 👨‍💼 Online Resume
 
-![HTML](./.gitlab/badges/html.svg)
-![CSS](./.gitlab/badges/css.svg)
-![TypeScript](./.gitlab/badges/typescript.svg)
+![HTML](.gitlab/badges/html.svg)
+![CSS](.gitlab/badges/css.svg)
+![TypeScript](.gitlab/badges/typescript.svg)
 
-![Svelte](./.gitlab/badges/svelte.svg)
-![TailwindCSS](./.gitlab/badges/tailwindcss.svg)
-![Vite](./.gitlab/badges/vite.svg)
-![Prettier](./.gitlab/badges/prettier.svg)
-![ESLint](./.gitlab/badges/eslint.svg)
+![Svelte](.gitlab/badges/svelte.svg)
+![TailwindCSS](.gitlab/badges/tailwindcss.svg)
+![Vite](.gitlab/badges/vite.svg)
+![Prettier](.gitlab/badges/prettier.svg)
+![ESLint](.gitlab/badges/eslint.svg)
 
 ## In French
 
@@ -53,7 +53,7 @@ Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, q
 ## In English
 
 > [!IMPORTANT]
-> Since March 2026, the project's code has been hosted on my custom GitLab instance, accessible at [this address](https://git.florian-dev.fr/floriantrayon/Online-Resume). The GitHub repository is a mirror of the GitLab repository, **automatically kept up to date**.
+> Since March 2026, the project's code has been hosted on my custom GitLab instance, available at [this address](https://git.florian-dev.fr/floriantrayon/Online-Resume). The GitHub repository is a mirror of the GitLab repository, **automatically kept up to date**.
 >
 > **Public contributions remain on GitHub and are welcome**; validated pull requests will then be manually transferred to GitLab to be integrated. 🙂
 
@@ -91,4 +91,4 @@ The first target has been achieved by using a JSON file, which makes it easy to 
 - Remove development dependencies using `npm prune --omit=dev` ;
 - Use a web server to serve the static files generated in the previous step.
 
-![image](./.gitlab/images/online-resume.png)
+![image](.gitlab/images/online-resume.png)
