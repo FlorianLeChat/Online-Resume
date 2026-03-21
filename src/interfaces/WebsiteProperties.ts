@@ -1,5 +1,5 @@
 export interface WebsiteProperties
 {
-	name: string;
-	url: string;
+    name: string;
+    url: string;
 }
