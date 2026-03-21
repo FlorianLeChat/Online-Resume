@@ -27,9 +27,6 @@ En poste en entreprise depuis un peu plus d'un an, j'ai souhaité actualiser mon
 
 Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, qui permet de modifier facilement l'ensemble des contenus sans toucher au code source. Le deuxième est rempli à travers une mise en page épurée, inspirée des CV traditionnels réalisés réalisé sous Word ou Figma. Enfin, le troisième a été concrétisé par l'intégration de QR codes et d'icônes, facilitant l'accès aux liens lors d'une impression ou d'une exportation en PDF, bien plus efficacement que de simples URL en texte brut.
 
-> [!NOTE]
-> Tout ou partie du code peut contenir des commentaires dans ma langue natale (le français) afin de faciliter le développement. 🌐
-
 ### Installation
 
 > [!WARNING]
@@ -66,9 +63,6 @@ After working for a company for a little over a year, I wanted to update my resu
 3. Offer a **dynamic site**, capable of adapting to different media (computer, mobile, PDF export, etc.).
 
 The first target has been achieved by using a JSON file, which makes it easy to modify all content without altering the source code. The second was fulfilled through a streamlined layout, inspired by traditional resumes created in Word or Figma. Finally, the third has been realized by integrating QR codes and icons, making links easier to access when printing or exporting to PDF, much more efficiently than simple plain-text URLs.
-
-> [!NOTE]
-> All or part of the code may contain comments in my native language (French) to ease development. 🌐
 
 ### Setup
 
