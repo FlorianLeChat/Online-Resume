@@ -1,5 +1,6 @@
 <script lang="ts">
     import data from "$lib/data/default.json";
+    import { env } from "$env/dynamic/public";
     import type { Configuration } from "$lib/types/configuration";
 
     import GitHubCorner from "./(components)/GitHubCorner.svelte";
@@ -16,6 +17,8 @@
 </script>
 
 <main lang={configuration.locale}>
+    <code>{ env.PUBLIC_VERSION ?? "0.0.1" }</code>
+
     <GitHubCorner />
     <Header />
     <Profile />
@@ -26,3 +29,11 @@
     <Hobbies />
     <PrintButton />
 </main>
+
+<style>
+    code {
+        top: 0.25rem;
+        left: 0.25rem;
+        position: absolute;
+    }
+</style>
