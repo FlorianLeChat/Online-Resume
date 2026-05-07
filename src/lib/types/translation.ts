@@ -1,5 +1,4 @@
-export interface TranslationProperties
-{
+export interface Translation {
     profile: string;
     skills: string;
     certifications: string;

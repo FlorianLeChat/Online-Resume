@@ -1,10 +1,10 @@
 <script lang="ts">
     import Link from "./Link.svelte";
-    import data from "../data/default.json";
-    import { formatDate } from "../utilities/date";
-    import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+    import data from "$lib/data/default.json";
+    import { formatDate } from "$lib/utilities/date";
+    import type { Configuration } from "$lib/types/configuration";
 
-    const configuration: ConfigurationProperties = data;
+    const configuration: Configuration = data;
     const translations = configuration.translations;
 </script>
 

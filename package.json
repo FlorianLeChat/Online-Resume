@@ -27,6 +27,7 @@
         "@eslint/js": "~10.0",
         "lint-staged": "~16.3",
         "svelte-check": "~4.4",
+        "@sveltejs/kit": "~2.59",
         "@commitlint/cli": "~20.4",
         "@tsconfig/svelte": "~5.0",
         "typescript-eslint": "~8.56",
@@ -35,7 +36,7 @@
         "prettier-plugin-svelte": "~3.5",
         "eslint-formatter-gitlab": "~7.0",
         "@stylistic/eslint-plugin": "~5.9",
-        "@sveltejs/vite-plugin-svelte": "~6.2",
+        "@sveltejs/adapter-static": "~3.0",
         "@commitlint/config-conventional": "~20.4"
     },
     "engines": {
@@ -45,11 +46,11 @@
     "scripts": {
         "dev": "vite",
         "lint": "eslint . --format gitlab --ext .js,.ts,.svelte",
-        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "build": "vite build",
         "format": "prettier --write \"**/*.{js,ts,svelte}\"",
         "preview": "vite preview",
-        "prepare": "husky",
+        "prepare": "husky && svelte-kit sync || echo ''",
         "commitlint": "commitlint --edit",
         "lint-staged": "lint-staged",
         "check-spell": "cspell src/data/*.json --show-context --show-suggestions"

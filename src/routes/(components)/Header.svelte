@@ -1,10 +1,10 @@
 <script lang="ts">
     import Link from "./Link.svelte";
-    import data from "../data/default.json";
+    import data from "$lib/data/default.json";
     import { SvelteDate } from "svelte/reactivity";
-    import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+    import type { Configuration } from "$lib/types/configuration";
 
-    const configuration: ConfigurationProperties = data;
+    const configuration: Configuration = data;
     const translations = configuration.translations;
 
     const getAge = ( birthDate: string ) =>

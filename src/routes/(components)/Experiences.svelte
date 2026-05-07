@@ -1,9 +1,9 @@
 <script lang="ts">
-    import data from "../data/default.json";
-    import { calculateDuration, formatDate } from "../utilities/date";
-    import type { ConfigurationProperties } from "../interfaces/ConfigurationProperties";
+    import data from "$lib/data/default.json";
+    import type { Configuration } from "$lib/types/configuration";
+    import { calculateDuration, formatDate } from "$lib/utilities/date";
 
-    const configuration: ConfigurationProperties = data;
+    const configuration: Configuration = data;
     const translations = configuration.translations;
 </script>
 
@@ -41,7 +41,7 @@
 
                     {#if experience.link}
                         <a
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer external"
                             href={experience.link}
                             target="_blank"
                         >

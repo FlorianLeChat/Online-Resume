@@ -1,5 +1,4 @@
-export interface EducationProperties
-{
+export interface Education {
     institution: string;
     degree: string;
     location: string;
