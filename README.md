@@ -5,7 +5,6 @@
 ![TypeScript](.gitlab/badges/typescript.svg)
 
 ![Svelte](.gitlab/badges/svelte.svg)
-![TailwindCSS](.gitlab/badges/tailwindcss.svg)
 ![Vite](.gitlab/badges/vite.svg)
 ![Prettier](.gitlab/badges/prettier.svg)
 ![ESLint](.gitlab/badges/eslint.svg)
@@ -19,7 +18,7 @@
 
 ### Introduction
 
-En poste en entreprise depuis un peu plus d'un an, j'ai souhaité actualiser mon *curriculum vitae* (CV) afin d'y intégrer les compétences, expériences et informations acquises récemment. Plutôt que de mettre à jour mon diaporama PowerPoint habituel qui me sert de CV, j'ai eu l'idée de créer un site Internet faisant office de CV en ligne. Réalisé en quelques jours grâce au *framework* [Svelte](https://svelte.dev/) ✨, ce projet, sans prétention sur le plan des fonctionnalités, repose néanmoins sur trois objectifs principaux :
+En poste en entreprise depuis un peu plus d'un an, j'ai souhaité actualiser mon *curriculum vitae* (CV) afin d'y intégrer les compétences, expériences et informations acquises récemment. Plutôt que de mettre à jour mon diaporama PowerPoint habituel qui me sert de CV, j'ai eu l'idée de créer un site Internet faisant office de CV en ligne. Réalisé en quelques jours grâce au *framework* [SvelteKit](https://svelte.dev/) ✨, ce projet, sans prétention sur le plan des fonctionnalités, repose néanmoins sur trois objectifs principaux :
 
 1. Offrir une **personnalisation rapide**, même pour les personnes disposant de peu de connaissances techniques ;
 2. Garantir une **lecture simple et agréable** pour les recruteurs ou tout autre visiteur ;
@@ -56,7 +55,7 @@ Le premier objectif a été atteint grâce à l'utilisation d'un fichier JSON, q
 
 ### Introduction
 
-After working for a company for a little over a year, I wanted to update my resume to include recently acquired skills, experience and contact information. Instead of updating my usual PowerPoint slideshow, which serves as my resume, I came up with the idea of creating a website to act as an online resume. Completed in just a few days thanks to [Svelte](https://svelte.dev/) ✨, this project, unpretentious in terms of functionalities, is nevertheless based on three main objectives:
+After working for a company for a little over a year, I wanted to update my resume to include recently acquired skills, experience and contact information. Instead of updating my usual PowerPoint slideshow, which serves as my resume, I came up with the idea of creating a website to act as an online resume. Completed in just a few days thanks to [SvelteKit](https://svelte.dev/) ✨, this project, unpretentious in terms of functionalities, is nevertheless based on three main objectives:
 
 1. **Fast customization**, even for people with little technical knowledge ;
 2. **Ensure easy, pleasant reading** for recruiters and other visitors ;
