@@ -13,7 +13,7 @@
     </figure>
 {/await}
 
-<a href={url} target="_blank" rel="noopener noreferrer">
+<a href={url} target="_blank" rel="noopener noreferrer external">
     {title}
 </a>
 

@@ -1,5 +1,4 @@
-export interface CertificationProperties
-{
+export interface Certification {
     name: string;
     issuer: string;
     date: string;

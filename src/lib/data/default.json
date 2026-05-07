@@ -45,7 +45,7 @@
 		},
 		{
 			"name": "Autres",
-			"data": ["Wordpress", "Visual Studio (Code)", "PHPStorm", "FileZilla", "Linux (Debian, CentOS)", "Windows", "MacOS"]
+			"data": ["Wordpress", "Visual Studio (Code)", "PHPStorm", "FileZilla", "GNU/Linux (Debian, CentOS)", "Windows", "MacOS"]
 		}
 	],
 	"experiences": [
