@@ -22,6 +22,7 @@
 	},
 	"websites": [
 		{ "name": "GitHub", "url": "https://github.com/FlorianLeChat" },
+        { "name": "GitLab", "url": "https://git.florian-dev.fr/floriantrayon" },
 		{ "name": "LinkedIn", "url": "https://www.linkedin.com/in/florian-trayon/" },
 		{ "name": "Portfolio", "url": "https://www.florian-trayon.fr" },
 		{ "name": "Blog", "url": "https://blog.florian-dev.fr" }
