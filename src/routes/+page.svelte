@@ -35,7 +35,7 @@
         top: 0.25rem;
         left: 0.25rem;
         position: absolute;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
 
     @media print {
