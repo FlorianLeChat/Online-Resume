@@ -34,7 +34,7 @@
         },
         {
             "name": "Frameworks",
-            "data": ["NodeJS", "React", "NextJS", "jQuery", "Svelte(Kit)", "Symfony", "TailwindCSS"]
+            "data": ["Node.js", "React", "NextJS", "jQuery", "Svelte(Kit)", "Symfony", "TailwindCSS"]
         },
         {
             "name": "Bases de données",
@@ -60,7 +60,7 @@
             "description": [
                 "Conception et développement d'un site Internet basé sur le jeu de plateau <i>Domego</i>.",
                 "Collaboration avec l'équipe de conception originale pour les éléments graphiques et les fonctionnalités de jeu afin d'assurer une expérience utilisateur cohérente.",
-                "Mise en œuvre d'une architecture <i>full-stack</i> en utilisant <b>React</b> pour la partie <i>front-end</i> puis <b>NodeJS</b> et <b>MongoDB</b> comme logique <i>back-end</i> avec la base de données.",
+                "Mise en œuvre d'une architecture <i>full-stack</i> en utilisant <b>React</b> pour la partie <i>front-end</i> puis <b>Node.js</b> et <b>MongoDB</b> comme logique <i>back-end</i> avec la base de données.",
                 "Optimisation des performances avec tests unitaires et end-to-end (E2E)."
             ]
         },
@@ -83,7 +83,7 @@
             "position": "Développeur Web Full-Stack",
             "startDate": "2024-03-01",
             "description": [
-                "Conception, amélioration et maintenance de sites Internet destinés aux professionnels des mutuelles et complémentaires santé, en utilisant les langages <b>JavaScript, TypeScript, NodeJS, SvelteKit, HTML, CSS/SASS, PHP</b>. Déploiement réalisé avec <b>GitLab CI, Docker, Apache, Ansible</b>, et <b>Traefik</b>, et utilisation des bases de données <b>MySQL, SQLite, Oracle</b>.",
+                "Conception, amélioration et maintenance de sites Internet destinés aux professionnels des mutuelles et complémentaires santé, en utilisant les langages <b>JavaScript, TypeScript, Node.js, SvelteKit, HTML, CSS/SASS, PHP</b>. Déploiement réalisé avec <b>GitLab CI, Docker, Apache, Ansible</b>, et <b>Traefik</b>, et utilisation des bases de données <b>MySQL, SQLite, Oracle</b>.",
                 "Migration réussie de la documentation en ligne des applications Web de l'entreprise, passant de <b>PicoCMS à Docusaurus</b>. Responsable de la configuration du <i>framework</i>, du transfert des contenus textuels, et de l'établissement d'un pipeline <b>CI/CD</b> sur <b>GitLab</b> pour assurer le déploiement des mises à jour automatiques de la documentation.",
                 "Création et implémentation d'un système de design sur <b>Figma</b>, suivi de l'intégration sémantique <b>HTML/CSS</b> de la charte graphique basée sur le <i>framework</i> <b>Bootstrap</b> sur diverses applications Web déjà existantes.",
                 "Participation à la création d'une application interne de suivi et de gestion des mises en recette des applications clients, en utilisant les <i>framework</i> <b>Bootstrap</b> et <b>SvelteKit</b> pour l'interface graphique, ainsi que <b>PHP</b> et <b>SQLite</b> pour la gestion des données.",
