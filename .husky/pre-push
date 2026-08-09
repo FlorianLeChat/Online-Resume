@@ -1,2 +1,2 @@
 npm run build
-cspell src/data/*.json --no-summary --no-progress --no-must-find-files
+npm run check-spell -- --no-must-find-files
