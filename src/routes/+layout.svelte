@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../app.css";
+    import "flag-icons/css/flag-icons.min.css";
     import { env } from "$env/dynamic/public";
     import { asset } from "$app/paths";
 
