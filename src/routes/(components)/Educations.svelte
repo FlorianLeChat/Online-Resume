@@ -1,7 +1,7 @@
 <script lang="ts">
-    import data from "$lib/data/default.json";
-    import { formatDate } from "$lib/utilities/date";
-    import type { Configuration } from "$lib/types/configuration";
+    import data from "#lib/data/default.json";
+    import { formatDate } from "#lib/utilities/date.ts";
+    import type { Configuration } from "#lib/types/configuration.ts";
 
     const configuration: Configuration = data;
     const translations = configuration.translations;

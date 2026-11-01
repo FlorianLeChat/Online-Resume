@@ -1,7 +1,7 @@
 <script lang="ts">
-    import data from "$lib/data/default.json";
-    import { env } from "$env/dynamic/public";
-    import type { Configuration } from "$lib/types/configuration";
+    import data from "#lib/data/default.json";
+    import { PUBLIC_VERSION } from "$app/env/public";
+    import type { Configuration } from "#lib/types/configuration.ts";
 
     import GitHubCorner from "./(components)/GitHubCorner.svelte";
     import Header from "./(components)/Header.svelte";
@@ -17,7 +17,7 @@
 </script>
 
 <main lang={configuration.locale}>
-    <code>{ env.PUBLIC_VERSION ?? "0.0.1" }</code>
+    <code>{ PUBLIC_VERSION }</code>
 
     <GitHubCorner />
     <Header />

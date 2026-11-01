@@ -1,8 +1,8 @@
 <script lang="ts">
     import Link from "./Link.svelte";
-    import data from "$lib/data/default.json";
+    import data from "#lib/data/default.json";
     import { SvelteDate } from "svelte/reactivity";
-    import type { Configuration } from "$lib/types/configuration";
+    import type { Configuration } from "#lib/types/configuration.ts";
 
     const configuration: Configuration = data;
     const translations = configuration.translations;
