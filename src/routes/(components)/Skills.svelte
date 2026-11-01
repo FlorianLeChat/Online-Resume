@@ -1,6 +1,6 @@
 <script lang="ts">
-    import data from "$lib/data/default.json";
-    import type { Configuration } from "$lib/types/configuration";
+    import data from "#lib/data/default.json";
+    import type { Configuration } from "#lib/types/configuration.ts";
 
     const configuration: Configuration = data;
     const translations = configuration.translations;
