@@ -4,6 +4,8 @@
     import { formatDate } from "#lib/utilities/date.ts";
     import type { Configuration } from "#lib/types/configuration.ts";
 
+    let { ats = false } = $props();
+
     const configuration: Configuration = data;
     const translations = configuration.translations;
 </script>
@@ -26,7 +28,8 @@
             {#if certification.link}
                 <Link
                     url={certification.link}
-                    title={translations.certifications}
+                    title={ats ? certification.name : translations.certifications}
+                    {ats}
                 />
             {/if}
         {/each}

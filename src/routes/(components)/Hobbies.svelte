@@ -1,6 +1,9 @@
 <script lang="ts">
     import data from "#lib/data/default.json";
+    import { stripEmoji } from "#lib/utilities/text.ts";
     import type { Configuration } from "#lib/types/configuration.ts";
+
+    let { ats = false } = $props();
 
     const configuration: Configuration = data;
     const translations = configuration.translations;
@@ -11,7 +14,7 @@
         <h2>{translations.hobbies}</h2>
 
         {#each configuration.hobbies as hobby ( hobby )}
-            <p>{@html hobby}</p>
+            <p>{@html ats ? stripEmoji( hobby ) : hobby}</p>
         {/each}
     </section>
 {/if}

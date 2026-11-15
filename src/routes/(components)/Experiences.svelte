@@ -8,7 +8,7 @@
 </script>
 
 {#if configuration.experiences}
-    {@const experiences = configuration.experiences.reverse()}
+    {@const experiences = [ ...configuration.experiences ].reverse()}
 
     <section>
         <h2>{translations.experiences}</h2>

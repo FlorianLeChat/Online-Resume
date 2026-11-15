@@ -8,4 +8,7 @@ export interface Translation {
     present: string;
     licence: string;
     export: string;
+    languages: string;
+    versionAts: string;
+    versionStandard: string;
 }

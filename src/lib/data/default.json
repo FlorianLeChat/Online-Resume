@@ -18,7 +18,10 @@
         "hobbies": "Centres d'intérêt",
         "present": "Présent",
         "licence": "Véhiculé",
-        "export": "Exporter au format PDF"
+        "export": "Exporter au format PDF",
+        "languages": "Langues",
+        "versionAts": "Version ATS (lisible par logiciel)",
+        "versionStandard": "Version standard"
     },
     "websites": [
         { "name": "GitHub", "url": "https://github.com/FlorianLeChat" },
