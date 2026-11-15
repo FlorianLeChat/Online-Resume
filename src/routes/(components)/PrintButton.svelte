@@ -6,21 +6,22 @@
     const translations = configuration.translations;
 </script>
 
-<button on:click={() => window.print()}>📄 {translations.export}</button>
+<button onclick={() => window.print()}><span aria-hidden="true">📄</span> {translations.export}</button>
 
 <style>
     button {
         color: white;
-        border: none;
+        border: 1px solid rgb(0, 86, 179);
         cursor: pointer;
-        padding: 5px 10px;
+        padding: 4px 10px;
         font-size: 0.875rem;
+        line-height: normal;
         border-radius: 4px;
-        background-color: rgb(26, 124, 209);
+        background-color: rgb(0, 86, 179);
     }
 
     button:hover {
-        background-color: rgb(0, 86, 179);
+        background-color: rgb(0, 64, 140);
     }
 
     @media print {
