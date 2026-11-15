@@ -110,3 +110,15 @@ section div.time
 		display: none;
 	}
 }
+
+main.ats section div.time
+{
+	float: none;
+	margin-left: 0;
+	text-align: left;
+}
+
+main.ats section a
+{
+	display: block;
+}

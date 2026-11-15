@@ -2,7 +2,10 @@
     import Link from "./Link.svelte";
     import data from "#lib/data/default.json";
     import { SvelteDate } from "svelte/reactivity";
+    import { formatLanguages } from "#lib/utilities/text.ts";
     import type { Configuration } from "#lib/types/configuration.ts";
+
+    let { ats = false } = $props();
 
     const configuration: Configuration = data;
     const translations = configuration.translations;
@@ -21,50 +24,77 @@
 
     <p>{configuration.job}</p>
 
-    {#if configuration.languages}
-        {#each configuration.languages as language ( language )}
-            {#if language === "en"}
-                <span class="fi fi-gb"></span>
-            {:else}
-                <span class="fi fi-{language}"></span>
+    {#if ats}
+        <p class="contact">
+            <a href="mailto:{configuration.email}">{configuration.email}</a> |
+            <a href="tel:{configuration.phone}">{configuration.phone}</a> |
+            {configuration.address} |
+            {getAge( configuration.birthDate )} ans
+
+            {#if configuration.hasVehicle}
+                | {translations.licence}
             {/if}
-        {/each}
-    {/if}
 
-    <ul>
-        <li>
-            📧 <a href="mailto:{configuration.email}">{configuration.email}</a> |
-        </li>
+            {#if configuration.languages}
+                | {translations.languages} : {formatLanguages( configuration.languages, configuration.locale )}
+            {/if}
+        </p>
 
-        <li>
-            📞 <a href="tel:{configuration.phone}">{configuration.phone}</a> |
-        </li>
-
-        <li>
-            📍 {configuration.address} |
-        </li>
-
-        <li>
-            🎂 {getAge( configuration.birthDate )} ans
-        </li>
-
-        {#if configuration.hasVehicle}
-            <li>| 🚗 {translations.licence}</li>
+        {#if configuration.websites}
+            <ul class="ats">
+                {#each configuration.websites as website ( website )}
+                    <li>
+                        <Link title={website.name} url={website.url} {ats} />
+                    </li>
+                {/each}
+            </ul>
         {/if}
-    </ul>
-
-    {#if configuration.websites}
-        <ul>
-            {#each configuration.websites as website, index ( website )}
-                {#if index > 0}
-                    <li class="space">&nbsp;|</li>
+    {:else}
+        {#if configuration.languages}
+            {#each configuration.languages as language ( language )}
+                {#if language === "en"}
+                    <span class="fi fi-gb"></span>
+                {:else}
+                    <span class="fi fi-{language}"></span>
                 {/if}
-
-                <li>
-                    <Link title={website.name} url={website.url} />
-                </li>
             {/each}
+        {/if}
+
+        <ul>
+            <li>
+                📧 <a href="mailto:{configuration.email}">{configuration.email}</a> |
+            </li>
+
+            <li>
+                📞 <a href="tel:{configuration.phone}">{configuration.phone}</a> |
+            </li>
+
+            <li>
+                📍 {configuration.address} |
+            </li>
+
+            <li>
+                🎂 {getAge( configuration.birthDate )} ans
+            </li>
+
+            {#if configuration.hasVehicle}
+                <li>| 🚗 {translations.licence}</li>
+            {/if}
         </ul>
+
+        {#if configuration.websites}
+            <ul>
+                {#each configuration.websites as website, index ( website )}
+                    {#if index > 0}
+                        <li class="space">&nbsp;|</li>
+                    {/if}
+
+                    <li>
+                        <Link title={website.name} url={website.url} />
+                    </li>
+                {/each}
+            </ul>
+        {/if}
     {/if}
 </header>
 
@@ -99,6 +129,20 @@
 
     li {
         display: inline-block;
+    }
+
+    p.contact {
+        display: block;
+        font-size: 0.875rem;
+        margin: 0.25rem 0 0 0;
+    }
+
+    ul.ats:last-of-type {
+        gap: 0.25rem 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        font-size: 0.875rem;
+        justify-content: center;
     }
 
     @media print {

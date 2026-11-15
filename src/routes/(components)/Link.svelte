@@ -1,21 +1,27 @@
 <script>
     import qrCode from "qrcode";
 
-    let { title, url } = $props();
+    let { title, url, ats = false } = $props();
 </script>
 
-{#await qrCode.toDataURL( url )}
-    <p>...</p>
-{:then dataUrl}
-    <figure>
-        <img src={dataUrl} alt={title} />
-        <figcaption>{title}</figcaption>
-    </figure>
-{/await}
+{#if ats}
+    <a class="ats" href={url} target="_blank" rel="noopener noreferrer external">
+        {title} : {url}
+    </a>
+{:else}
+    {#await qrCode.toDataURL( url )}
+        <p>...</p>
+    {:then dataUrl}
+        <figure>
+            <img src={dataUrl} alt={title} />
+            <figcaption>{title}</figcaption>
+        </figure>
+    {/await}
 
-<a href={url} target="_blank" rel="noopener noreferrer external">
-    {title}
-</a>
+    <a href={url} target="_blank" rel="noopener noreferrer external">
+        {title}
+    </a>
+{/if}
 
 <style>
     figure {
@@ -41,7 +47,7 @@
             height: 100px;
         }
 
-        a {
+        a:not(.ats) {
             display: none;
         }
     }
