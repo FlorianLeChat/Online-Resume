@@ -30,7 +30,7 @@
                         {/if}
                     </div>
 
-                    <h4>{education.institution} - {education.location}</h4>
+                    <p class="organization">{education.institution} - {education.location}</p>
 
                     {#if education.statement}
                         <small>
@@ -57,11 +57,15 @@
     small {
         width: fit-content;
         display: block;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
     }
 
     p,
     li {
         font-size: 0.875rem;
+    }
+
+    li {
+        margin-bottom: 0.25rem;
     }
 </style>

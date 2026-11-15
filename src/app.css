@@ -38,7 +38,7 @@ section
 
 section h2
 {
-	color: rgb(26, 124, 209);
+	color: rgb(0, 86, 179);
 	font-size: 1.25rem;
 	border-bottom: 1px solid rgb(170, 170, 170);
 	margin-bottom: 0.5cm;
@@ -52,10 +52,10 @@ section h3
 	margin-bottom: 0;
 }
 
-section h4
+section p.organization
 {
 	margin: 0 0 0.1rem 0;
-	font-size: 0.85rem;
+	font-size: 0.875rem;
 	font-style: italic;
 	font-weight: normal;
 }
@@ -65,7 +65,7 @@ section a
 	color: inherit;
 	width: fit-content;
 	display: block;
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	margin-bottom: 1rem;
 	text-decoration: dotted underline;
 	text-underline-offset: 2px;
@@ -82,7 +82,7 @@ section a
 
 section div.time
 {
-	font-size: 0.85rem;
+	font-size: 0.875rem;
 }
 
 @media screen and (min-width: 768px)
@@ -108,6 +108,23 @@ section div.time
 	section a
 	{
 		display: none;
+	}
+
+	section h2,
+	section h3
+	{
+		break-after: avoid;
+	}
+
+	article header
+	{
+		break-after: avoid;
+		break-inside: avoid;
+	}
+
+	article li
+	{
+		break-inside: avoid;
 	}
 }
 

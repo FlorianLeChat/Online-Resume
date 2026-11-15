@@ -37,7 +37,7 @@
                         {duration}
                     </div>
 
-                    <h4>{experience.company} - {experience.location}</h4>
+                    <p class="organization">{experience.company} - {experience.location}</p>
 
                     {#if experience.link}
                         <a
@@ -68,5 +68,9 @@
     p,
     li {
         font-size: 0.875rem;
+    }
+
+    li {
+        margin-bottom: 0.25rem;
     }
 </style>

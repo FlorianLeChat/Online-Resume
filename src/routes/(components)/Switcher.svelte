@@ -10,16 +10,22 @@
 </script>
 
 <a href={ats ? resolve( "/" ) : resolve( "/ats" )}>
-    {ats ? translations.versionStandard : translations.versionAts}
+    <span aria-hidden="true">{ats ? "🎨" : "🤖"}</span> {ats ? translations.versionStandard : translations.versionAts}
 </a>
 
 <style>
     a {
-        color: inherit;
+        color: rgb(0, 86, 179);
+        border: 1px solid rgb(0, 86, 179);
+        padding: 4px 10px;
         font-size: 0.875rem;
-        margin-left: 0.5rem;
-        text-decoration: dotted underline;
-        text-underline-offset: 2px;
+        line-height: normal;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: rgba(0, 86, 179, 0.08);
     }
 
     @media print {

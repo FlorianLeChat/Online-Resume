@@ -18,6 +18,7 @@
         "hobbies": "Centres d'intérêt",
         "present": "Présent",
         "licence": "Véhiculé",
+        "years": "ans",
         "export": "Exporter au format PDF",
         "languages": "Langues",
         "versionAts": "Version ATS (lisible par logiciel)",
@@ -37,19 +38,19 @@
         },
         {
             "name": "Frameworks",
-            "data": ["Node.js", "React", "NextJS", "jQuery", "Svelte(Kit)", "Symfony", "TailwindCSS"]
+            "data": ["Node.js", "React", "NextJS", "jQuery", "Svelte(Kit)", "Symfony", "Doctrine", "TailwindCSS", "Bootstrap", "Jekyll"]
         },
         {
             "name": "Bases de données",
-            "data": ["MySQL/MariaDB", "Oracle", "MongoDB", "SQLite"]
+            "data": ["MySQL/MariaDB", "PostgreSQL", "Oracle", "MongoDB", "Redis", "SQLite"]
         },
         {
             "name": "Outils",
-            "data": ["Git", "RabbitMQ", "Mantis", "Proxmox", "Apache", "Nginx", "Traefik", "Google Analytics", "Docker", "Ansible"]
+            "data": ["Git", "RabbitMQ", "Proxmox", "Apache", "Nginx", "Traefik", "Docker", "Ansible", "GitHub", "GitLab", "Grafana", "ESLint", "Vitest", "Playwright", "Claude", "Claude Code", "MCP"]
         },
         {
             "name": "Autres",
-            "data": ["Wordpress", "Visual Studio (Code)", "PHPStorm", "FileZilla", "GNU/Linux (Debian, CentOS)", "Windows", "MacOS"]
+            "data": ["Wordpress", "Visual Studio (Code)", "PHPStorm", "GNU/Linux (Debian, CentOS)", "Windows", "MacOS"]
         }
     ],
     "experiences": [

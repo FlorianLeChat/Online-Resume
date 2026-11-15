@@ -19,3 +19,9 @@
         </ul>
     </section>
 {/if}
+
+<style>
+    code {
+        overflow-wrap: anywhere;
+    }
+</style>

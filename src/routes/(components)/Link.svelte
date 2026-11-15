@@ -9,9 +9,7 @@
         {title} : {url}
     </a>
 {:else}
-    {#await qrCode.toDataURL( url )}
-        <p>...</p>
-    {:then dataUrl}
+    {#await qrCode.toDataURL( url ) then dataUrl}
         <figure>
             <img src={dataUrl} alt={title} />
             <figcaption>{title}</figcaption>

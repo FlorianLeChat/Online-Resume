@@ -11,8 +11,6 @@
     import Experiences from "./Experiences.svelte";
     import Educations from "./Educations.svelte";
     import Hobbies from "./Hobbies.svelte";
-    import PrintButton from "./PrintButton.svelte";
-    import Switcher from "./Switcher.svelte";
 
     let { ats = false } = $props();
 
@@ -37,8 +35,6 @@
     <Experiences />
     <Educations />
     <Hobbies {ats} />
-    <PrintButton />
-    <Switcher {ats} />
 </main>
 
 <style>
@@ -49,7 +45,7 @@
         font-size: 0.75rem;
     }
 
-    @media print {
+    @media screen and (max-width: 768px), print {
         code {
             display: none;
         }

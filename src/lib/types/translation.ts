@@ -7,6 +7,7 @@ export interface Translation {
     hobbies: string;
     present: string;
     licence: string;
+    years: string;
     export: string;
     languages: string;
     versionAts: string;

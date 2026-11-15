@@ -1,5 +1,7 @@
 <script lang="ts">
     import Link from "./Link.svelte";
+    import PrintButton from "./PrintButton.svelte";
+    import Switcher from "./Switcher.svelte";
     import data from "#lib/data/default.json";
     import { SvelteDate } from "svelte/reactivity";
     import { formatLanguages } from "#lib/utilities/text.ts";
@@ -9,6 +11,7 @@
 
     const configuration: Configuration = data;
     const translations = configuration.translations;
+    const languageNames = new Intl.DisplayNames( configuration.locale, { type: "language" } );
 
     const getAge = ( birthDate: string ) =>
     {
@@ -29,7 +32,7 @@
             <a href="mailto:{configuration.email}">{configuration.email}</a> |
             <a href="tel:{configuration.phone}">{configuration.phone}</a> |
             {configuration.address} |
-            {getAge( configuration.birthDate )} ans
+            {getAge( configuration.birthDate )} {translations.years}
 
             {#if configuration.hasVehicle}
                 | {translations.licence}
@@ -53,32 +56,32 @@
         {#if configuration.languages}
             {#each configuration.languages as language ( language )}
                 {#if language === "en"}
-                    <span class="fi fi-gb"></span>
+                    <span class="fi fi-gb" role="img" aria-label={languageNames.of( language )}></span>
                 {:else}
-                    <span class="fi fi-{language}"></span>
+                    <span class="fi fi-{language}" role="img" aria-label={languageNames.of( language )}></span>
                 {/if}
             {/each}
         {/if}
 
         <ul>
             <li>
-                📧 <a href="mailto:{configuration.email}">{configuration.email}</a> |
+                <span aria-hidden="true">📧</span> <a href="mailto:{configuration.email}">{configuration.email}</a>
             </li>
 
             <li>
-                📞 <a href="tel:{configuration.phone}">{configuration.phone}</a> |
+                <span aria-hidden="true">📞</span> <a href="tel:{configuration.phone}">{configuration.phone}</a>
             </li>
 
             <li>
-                📍 {configuration.address} |
+                <span aria-hidden="true">📍</span> {configuration.address}
             </li>
 
             <li>
-                🎂 {getAge( configuration.birthDate )} ans
+                <span aria-hidden="true">🎂</span> {getAge( configuration.birthDate )} {translations.years}
             </li>
 
             {#if configuration.hasVehicle}
-                <li>| 🚗 {translations.licence}</li>
+                <li><span aria-hidden="true">🚗</span> {translations.licence}</li>
             {/if}
         </ul>
 
@@ -86,7 +89,7 @@
             <ul>
                 {#each configuration.websites as website, index ( website )}
                     {#if index > 0}
-                        <li class="space">&nbsp;|</li>
+                        <li class="space" aria-hidden="true">|</li>
                     {/if}
 
                     <li>
@@ -96,6 +99,11 @@
             </ul>
         {/if}
     {/if}
+
+    <div class="actions">
+        <Switcher {ats} />
+        <PrintButton />
+    </div>
 </header>
 
 <style>
@@ -106,7 +114,7 @@
     }
 
     h1 {
-        color: rgb(26, 124, 209);
+        color: rgb(0, 86, 179);
         margin: 0;
         font-size: 2rem;
     }
@@ -131,6 +139,32 @@
         display: inline-block;
     }
 
+    ul:not(.ats) > li:not(.space) + li:not(.space)::before {
+        content: "|";
+        margin: 0 0.5ch;
+    }
+
+    li.space {
+        margin: 0 0.5ch;
+    }
+
+    @media screen and (max-width: 768px) {
+        ul:not(.ats) {
+            gap: 0.25rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul:not(.ats) > li::before {
+            content: none !important;
+        }
+
+        li.space {
+            display: none;
+        }
+    }
+
     p.contact {
         display: block;
         font-size: 0.875rem;
@@ -145,7 +179,20 @@
         justify-content: center;
     }
 
+    .actions {
+        gap: 0.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 0.5rem 0;
+        justify-content: center;
+    }
+
     @media print {
+        .actions {
+            display: none;
+        }
+
         ul:last-of-type {
             display: flex;
             justify-content: space-evenly;
